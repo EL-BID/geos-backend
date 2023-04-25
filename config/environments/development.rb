@@ -88,6 +88,7 @@ Rails.application.configure do
   # Use default logging formatter so that PID and timestamp are not suppressed.
   config.log_formatter = ::Logger::Formatter.new
 
+
   ActionMailer::Base.smtp_settings = {
     address:              ENV['MAIL_SERVER'],
     port:                 ENV['MAIL_PORT'],
@@ -95,7 +96,7 @@ Rails.application.configure do
     user_name:            ENV['MAIL_USERNAME'],
     password:             ENV['MAIL_PASSWORD'],
     domain:               ENV['MAIL_DOMAIN'],
-    enable_starttls_auto: true
+    enable_starttls_auto: false
   }
   config.app_url = ENV['FRONTEND_URL']
   config.admin_url = ENV['BACKEND_URL']
