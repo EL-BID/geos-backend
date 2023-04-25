@@ -34,7 +34,5 @@ dump/*
 yarn-debug.log*
 .yarn-integrity
 .env
-Gemfile
 Gemfile.lock
 sonar-project.properties
-config/mongoid.yml
