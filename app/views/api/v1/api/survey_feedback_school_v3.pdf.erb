@@ -1,8 +1,10 @@
 <% content_for :head do %>
   <style>
-    .page.number-1{
-      background-color: <%= @colorSecondary %>;
+    .page.number-1,
+    .page.last-page{
+      background-color: #014f6e;
     }
+
     .page.number-1 {
       border-right: 5px solid <%= @colorSecondary %>;
     }
@@ -29,8 +31,9 @@
 <div class="page number-1">
   <header>
     <div class="logo-guiaedutec">
-      <%= wicked_pdf_image_tag('devolutive-school-v3/logo-guia-edutec-branco.png', :width=>"300") %>
+      <%= wicked_pdf_image_tag('logos/bid.png', :width=>"300") %>
     </div>
+    <%= wicked_pdf_image_tag('devolutive-school-v3/logo-guia-edutec-branco.png', :width=>"200") %>
   </header>
   <main>
     <h1 class="title"><%= @feedbacks_all[0]['body']["0"].html_safe %></h1>
@@ -39,7 +42,7 @@
   </main>
   <footer>
     <div class="logo-cieb-container">
-      <%= wicked_pdf_image_tag(@logoFooter) %>
+      
     </div>
     <div class="date">
       <p><%= l(@survey_response.submitted_at, format: :month)%></p>
@@ -707,17 +710,20 @@
 </div>
 
 <%# FIM PAGE 6 %>
-<div class="page number-7">
+<div class="page number-7 last-page">
   <div class="container">
   <main>
     <div id="teste"></div>
     <div class="logo-cieb">
-      <%= wicked_pdf_image_tag(@logoFooter, :class=> "img-fit") %>
+      <!-- <%= wicked_pdf_image_tag(@logoFooter, :class=> "img-fit") %> -->
     </div>
     <p>
     <mark>
-      INOVAÇÃO E CONEXÕES<br> QUE TRANSFORMAM<br>
-      A EDUCAÇÃO
+    INNOVACIÓN Y CONEXIONES
+    <br>
+    QUE TRANSFORMAN
+    <br>
+    LA EDUCACIÓN
     </mark>
     </p>
   </main>
