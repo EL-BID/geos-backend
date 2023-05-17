@@ -9,12 +9,11 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-    / Bootstrap
-    %link{href: "http://netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel: "stylesheet"}/
-    / Icons
-    %link{href: "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css", rel: "stylesheet"}/
-    / Fonts
-    %link{href: "http://fonts.googleapis.com/css?family=Lato:400,400i,700", rel: "stylesheet"}/
+
+    = wicked_pdf_stylesheet_link_tag 'survey_feedback/bootstrap.min'
+    = wicked_pdf_stylesheet_link_tag 'survey_feedback/google-fonts'
+    = wicked_pdf_stylesheet_link_tag 'survey_feedback/font-awesome.min'
+
     / Custom styles
     - if @survey.feedback.downcase.include? "school_v3"
       = wicked_pdf_stylesheet_link_tag 'survey_feedback_school_v3'
