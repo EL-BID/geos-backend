@@ -285,6 +285,11 @@ Rails.application.routes.draw do
       end
 
       resources :surveys, defaults: { format: 'json' }
+
+
+      #Reports
+      get '/reports/follow_up.xls', to: 'report_follow_up#xls', defaults: {format: :xls}
+
     end
   end
 
