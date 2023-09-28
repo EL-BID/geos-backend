@@ -2,12 +2,13 @@ module Api
     module V1
         class ReportFollowUpController < ApiController
 
-            require 'csv'
             require 'spreadsheet'
 
             respond_to :json, :pdf, :xls
 
             def xls
+
+                dateFormat = "%F %T"
 
                 #Init Spreadsheet
                 book = Spreadsheet::Workbook.new
@@ -61,7 +62,7 @@ module Api
                         s.school.name,
                         s.name,
                         s.email,
-                        resp&.submitted_at,
+                        resp&.submitted_at&.strftime(dateFormat),
                         resp&.status,
                     ]
                 }
@@ -123,7 +124,7 @@ module Api
                         s.cpf,
                         s.name,
                         s.email,
-                        resp&.submitted_at,
+                        resp&.submitted_at&.strftime(dateFormat),
                         resp&.status,
                     ]
                 }
@@ -139,12 +140,7 @@ module Api
                     self.fetchUsers('teacher'),
                     teachersSetter
                 )
-                #"
-
-                #abc = self.fetchResposesCount('principal')
-                #render json: {abc: abc}
-
-                #"
+    
                 #Write to Stream
                 file = StringIO.new
                 book.write(file)
@@ -156,7 +152,6 @@ module Api
                 respond_to do |format|
                     format.xls { send_data file.string.force_encoding('binary'), filename: filename }
                 end 
-                #"
             end
 
             def fetchSchools
@@ -176,7 +171,7 @@ module Api
                     :'school.state_name'.asc,
                     :'school.city_name'.asc,
                     :'school.name'.asc,
-                ).limit(100)
+                )
             end
 
             def fetchResposesCount(profile, allSchools)
