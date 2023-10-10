@@ -257,7 +257,11 @@ class Job
           row_csv << rows
           surveyResp.each do |sr|
             if(user.admin_country?)
+              Rails.logger.info("Survey Response")
+              Rails.logger.info(sr.inspect)
               u = User.where(id: sr['user_id']).first
+              Rails.logger.info("User")
+              Rails.logger.info(u)
               if(u['country_id'] == user['country_id'])
                 s = School.where(id: u['school_id']).first
                 if(s['name'] != "Dummy School For Unaffiliated Users")
@@ -279,37 +283,37 @@ class Job
                   stagesR = []
                   st = u['stages']
                   stages.each do |stage|
-                    if(st.include?(stage.to_s))
-                      stagesR.push(1)
-                    else
-                      stagesR.push(0)
-                    end
+                   if(st.include?(stage.to_s))
+                     stagesR.push(1)
+                   else
+                     stagesR.push(0)
+                   end
                   end
 
                   knowledgesR = []
                   k = u['knowledges']
                   knowledges.each do |knowledge|
-                    if(k.include?(knowledge.to_s))
-                      knowledgesR.push(1)
-                    else
-                      knowledgesR.push(0)
-                    end
+                   if(k.include?(knowledge.to_s))
+                     knowledgesR.push(1)
+                   else
+                     knowledgesR.push(0)
+                   end
                   end
 
                   formacaoR = []
                   if(u['formation'].to_s == "false")
-                    formacao.each do |ff|
-                      formacaoR.push(0)
-                    end
+                   formacao.each do |ff|
+                     formacaoR.push(0)
+                   end
                   else
-                    f = u['formation_level']
-                    formacao.each do |ff|
-                      if(f.include?(ff.to_s))
-                        formacaoR.push(1)
-                      else
-                        formacaoR.push(0)
-                      end
-                    end
+                   f = u['formation_level']
+                   formacao.each do |ff|
+                     if(f.include?(ff.to_s))
+                       formacaoR.push(1)
+                     else
+                       formacaoR.push(0)
+                     end
+                   end
                   end
                   
                   levels = []
@@ -350,21 +354,21 @@ class Job
                 stagesR = []
                 st = u['stages']
                 stages.each do |stage|
-                  if(st.include?(stage.to_s))
-                    stagesR.push(1)
-                  else
-                    stagesR.push(0)
-                  end
+                 if(st.include?(stage.to_s))
+                   stagesR.push(1)
+                 else
+                   stagesR.push(0)
+                 end
                 end
 
                 knowledgesR = []
                 k = u['knowledges']
                 knowledges.each do |knowledge|
-                  if(k.include?(knowledge.to_s))
-                    knowledgesR.push(1)
-                  else
-                    knowledgesR.push(0)
-                  end
+                 if(k.include?(knowledge.to_s))
+                   knowledgesR.push(1)
+                 else
+                   knowledgesR.push(0)
+                 end
                 end
 
                 formacaoR = []
