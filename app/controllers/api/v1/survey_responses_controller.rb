@@ -1014,6 +1014,7 @@ module Api
         dateStart = params[:start].to_s != "" ? params[:start].to_datetime : -12.month.from_now
         dateEnd = params[:end].to_s != "" ? (params[:end]+"T23:59:59").to_datetime : 1.day.from_now
 
+      
         matchSurveyResponses = {
           "$match" => {
             "$and" => [
@@ -1023,8 +1024,9 @@ module Api
             ]
           }
         }
+      
         pipeline.push(matchSurveyResponses)
-
+      
         if !user.super_admin? || (params[:used_indicator] && params[:used_indicator].to_s != "")
           used_indicator = {}
 
@@ -1050,23 +1052,6 @@ module Api
           pipeline.push(lookupSchool, matchFilterSchool)
         end
 
-        if (params[:knowledge] && params[:knowledge].to_s != "") || (params[:teaching_stage] && params[:teaching_stage].to_s != "")
-          lookupUser = {
-            "$lookup" => {
-              :from => "users",
-              :localField => "user_id",
-              :foreignField => "_id",
-              :as => "user"
-            }
-          }
-          matchFilterUser = {
-            "$match" => {
-              "$and" => match_filter_user
-            }
-          }
-          pipeline.push(lookupUser, matchFilterUser)
-        end
-
         projectResults = {
           "$project" => {
             :_id => 1,
@@ -1086,39 +1071,14 @@ module Api
               "_id": "$_id",
               "area_name": { "$arrayElemAt" => [ { "$split" => %w($results.name </H1>) }, 0 ] }
             },
-            :count => { "$sum" => 1 },
-            :results => { "$push" => "$results.value" }
+            :avg => { "$avg" => "$results.value" }
           }
         }
-        projectMidpoint = {
-          "$project" => {
-            :id => 1,
-            :results => 1,
-            :midpoint => {
-              "$divide" => [ { "$sum" => [ "$count", -1 ] }, 2 ]
-            }
-          }
-        }
-        projectHighLow = {
-          "$project" => {
-            :id => 1,
-            :results => 1,
-            :high => { "$ceil" => "$midpoint" },
-            :low => { "$floor" => "$midpoint" }
-          }
-        }
-        projectMedian = {
-          "$project" => {
-            :id => 1,
-            :results => 1,
-            :median => { "$avg" => [ { "$arrayElemAt" => [ "$results", "$high" ] }, { "$arrayElemAt" => [ "$results", "$low" ] } ] }
-          }
-        }
-        groupAreas = {
+        groupFloor = {
           "$group" => {
             :_id => {
               "area": "$_id.area_name",
-              "median": { "$ceil" => "$median" }
+              "level": { "$floor" => "$avg" }
             },
             :count => { "$sum" => 1 }
           }
@@ -1127,30 +1087,33 @@ module Api
           "$project" => {
             :_id => false,
             :area => { "$substr": [ "$_id.area", 4, { "$strLenCP": "$_id.area" } ] },
-            :level => "$_id.median",
+            :level => "$_id.level",
             :count => "$count"
           }
         }
         sortMain = { "$sort" => { "area" => 1, "level" => 1 } }
-        pipeline.push(projectResults, unwindResults, sortResults, groupSplitAreaName, projectMidpoint, projectHighLow, projectMedian, groupAreas, projectMain, sortMain)
-
+        pipeline.push(projectResults, unwindResults, sortResults, groupSplitAreaName, groupFloor, projectMain, sortMain)
         survey_responses = SurveyResponse.collection.aggregate(pipeline, :allow_disk_use => true, :read => { :mode => :secondary_preferred }).to_a
-
         @responseGroup = Hash.new
         survey_responses.each do |resp|
           if !@responseGroup[resp[:area]]
             @responseGroup[resp[:area]] = {}
           end
-
+      
           level = resp[:level].round
           if !@responseGroup[resp[:area]][level]
             @responseGroup[resp[:area]][level] = {}
           end
-
+      
           @responseGroup[resp[:area]][level] = resp[:count]
         end
-
+      
+      
         render json: (@responseGroup).as_json()
+      
+        # survey_responses = SurveyResponse.collection.aggregate(pipeline, :allow_disk_use => true, :read => { :mode => :secondary_preferred }).to_a
+        # puts survey_responses
+        # render json: survey_responses
       end
 
       def result_self_evaluation_details
