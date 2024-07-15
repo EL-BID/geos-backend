@@ -178,7 +178,7 @@ class SurveyResponse
     case section.ceil_result
     when 'ceil' then (scores.sum / section.divisor).ceil
     when 'not_ceil' then (scores.sum / section.divisor)
-    when 'down' then (scores.sum / section.divisor).round(half: :down)
+    when 'down' then (scores.sum / section.divisor).floor
     else (scores.sum / section.divisor).ceil
     end
   end
