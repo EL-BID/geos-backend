@@ -4,7 +4,7 @@
 
 ## Back-end project
 
-
+* [Technical Documentation](https://github.com/EL-BID/geos-backend/blob/master/Documentaci%C3%B3n_T%C3%A9cnica_Guia_Edutec.pdf)
 
 Access to other projects
 * [Front-end](https://github.com/EL-BID/geos-frontend)
