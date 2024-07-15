@@ -15,7 +15,8 @@
 /coverage/*
 .git
 .features
-public/uploads
+app/public/uploads
+!app/public/uploads/.gitkeep
 spec/support/uploads
 vendor/assets/components
 vendor/bundle
