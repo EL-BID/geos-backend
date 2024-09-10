@@ -1,4 +1,3 @@
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=EL-BID_geos-backend&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=EL-BID_geos-backend)
 
 # Guia Edutec Repository - Open Source
 
