@@ -1,5 +1,5 @@
 # Use Ruby 2.4.10 as base image
-FROM ruby:2.7.2
+FROM ruby:3.0.0
 
 ENV TZ America/Sao_Paulo
 
