@@ -92,8 +92,8 @@ Rails.application.routes.draw do
       get '/langs/', to: 'languages#get_langs', as: 'get_langs', defaults: {format: 'json'}
       post '/language/', to: 'languages#save_language', as: 'save_language'
       post '/schools/upload/', to: 'schools#upload_school_csv', as: 'upload_school_csv'
-      get '/translation/:lang', to: 'translations#get_translation_by_lang', as: 'get_translation_by_lang',
-                                defaults: {format: 'json'}
+      # get '/translation/:lang', to: 'translations#get_translation_by_lang', as: 'get_translation_by_lang',
+      #                           defaults: {format: 'json'}
       get '/language/langs/', to: 'languages#get_langs_translation', as: 'get_langs_translation',
                               defaults: {format: 'json'}
       post '/translation/', to: 'translations#save_translation', as: 'save_translation'

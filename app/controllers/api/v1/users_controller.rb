@@ -7,6 +7,47 @@ module Api
       before_action :authenticate_user!, except: [:index, :show, :create, :update]
       before_action :authenticate_admin!, except: [:index, :show,  :create, :update, :get_email_by_id, :destroy]
 
+	#   Edit this depending on the user model (data by user profile, etc)
+      def user_params        
+        params.require(:user).permit(
+          :_id,
+          :access_token,
+          :profile,
+          :name,
+          :born,
+          :gender,
+          :email,
+          :password,
+          :affiliation_id,
+          :affiliation_name,
+          :locked,
+          :country_id,
+          :province_id,
+          :state_id,
+          :city_id,
+          :school_id,
+          :share_personal_data,
+          :share_work_data,
+		  :tos,
+		  teacher_data: [
+			:formation_level,
+			:year_finished_formation,
+			:initial_formation,
+			:internship_practice,
+			:institution_initial_formation,
+			:tech_in_teaching,
+			:course_modality,
+			:formation_in_tech,
+			:years_teaching,
+			:years_using_tech,
+			tech_application: []
+		  ],
+          principal_data: [
+
+          ]
+        ) 
+      end
+
       def survey_response
         @user = User.find(params[:id])
         @school = @user.school
@@ -272,9 +313,15 @@ module Api
 
         school_type = user_params[:school_type]
 
-        @user = User.new(user_params.except("teacher_data"))
+        @user = User.new(user_params)
 
-        if(ActiveModel::Type::Boolean.new.cast(params['noaff']))
+        if(!@user.share_personal_data)
+          @user.name = "Anonymous"
+		  @user.born = "1900-01-01"
+          @user.gender = "didnt_say"
+        end
+
+        if(!@user.share_work_data)
           @institution = Institution.find_by(name: 'Dummy Affiliation For Unaffiliated Users')
           @user.institution = @institution
           @school = School.find_by(name: 'Dummy School For Unaffiliated Users')
@@ -287,38 +334,26 @@ module Api
           @user.province_id = BSON::ObjectId.from_string(province[:id])
         else
           if @user.admin_state? || @user.admin_city? || @user.teacher? || @user.principal?
-            @institution = Institution.find_by(id: BSON::ObjectId.from_string(user_params[:affiliation_id]))
-            @user.institution = @institution
+            # @institution = Institution.find_by(id: BSON::ObjectId.from_string(user_params[:affiliation_id]))
+            # @user.institution = @institution
           end
           if @user.teacher?
             @survey = Survey.find_by({:type => "personal"})
-            if Formation.where(:name => user_params[:initial_formation]).first.nil?
-              formation = Formation.new(:name => user_params[:initial_formation].to_s.capitalize.strip)
-              formation.save
-            end
-            if EducationalInstitution.where(:name => user_params[:institution_initial_formation]).first.nil?
-              educational_institution = EducationalInstitution.new(:name => user_params[:institution_initial_formation])
-              educational_institution.save
-            end
-            year_difference = Time.zone.now.year - Date.parse(user_params[:final_year_of_initial_formation]).year
-            if year_difference < 2
-              @user[:range_final_year_of_initial_formation] = "less_2_years"
-            elsif year_difference >= 2 && year_difference <= 5
-              @user[:range_final_year_of_initial_formation] = "bet_2_and_5_years"
-            elsif year_difference >= 6 && year_difference <= 10
-              @user[:range_final_year_of_initial_formation] = "bet_6_and_10_years"
-            elsif year_difference > 10
-              @user[:range_final_year_of_initial_formation] = "more_10_years"
-            end
+            @school = School.find_by({:_id => user_params[:school_id]})
+
+            #Affiliation
+            affiliation_id = @school[:affiliation_id]
+            @user.affiliation_id = affiliation_id
+            @user.affiliation_name = @school[:affiliation_name]
 
             survey_schedule_id = nil
             
-            @survey_schedules = SurveySchedule.where(:survey_id => @survey.id, :affiliation_id => BSON::ObjectId.from_string(user_params[:affiliation_id]))
+            @survey_schedules = SurveySchedule.where(:survey_id => @survey.id, :affiliation_id => affiliation_id)
             
             if @survey_schedules.length != 0
               survey_schedule_id = @survey_schedules.sort({created_at: 1}).last["_id"]
             else
-              new_schedule = SurveySchedule.new(:state_id => user_params[:city_id], :survey_id => @survey.id, :affiliation_id => BSON::ObjectId.from_string(user_params[:affiliation_id]))
+              new_schedule = SurveySchedule.new(:state_id => user_params[:city_id], :survey_id => @survey.id, :affiliation_id => affiliation_id)
               if new_schedule.save
                 survey_schedule_id = new_schedule.id
               end
@@ -468,11 +503,6 @@ module Api
           params[:access_token] = @user.authenticity_token
         end
       end
-
-      def user_params        
-        params.require(:user).permit(:_id, :access_token, :profile, :name, :password, :email, :born, :affiliation_id, :geo_structure_level1_name, :geo_structure_level2_name, :geo_structure_level3_name, :geo_structure_level4_name, :country_id, :province_id, :state_id, :city_id, :school_id,  :locked, :affiliation_name, :responsible_name, :responsible_email, :responsible_phone_number, :cpf, :term, :sharing, :gender, :initial_formation, :institution_initial_formation, :internship_practice, :technology_in_teaching_and_learning, :course_modality, :final_year_of_initial_formation,institution:[], stages: [], knowledges: [], formation_level: [:value, :label, :isDisabled], teacher_data: [:formation_level, :cont_educ_in_the_use_of_digital_technologies, :years_teaching, :years_of_uses_technology_for_teaching, technology_application: []])
-      end
-
-    end
+	end
   end
 end
