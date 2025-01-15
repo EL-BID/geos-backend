@@ -21,6 +21,45 @@ module Api
         end
       end      
 
+      def create_section
+        user = current_user
+        if user.admin?
+			puts params
+			survey_question_params = (params[:survey_question])
+			permitted_params = survey_question_params.permit(
+				:position,
+				:survey_id,
+				:has_feedback,
+				:has_result,
+				:has_question,
+				:name,
+				user_type: [],
+			)
+			@section = SurveySection.new(permitted_params)
+			
+			if @section.save
+				render json: @section.to_json
+			else
+				render json: {status: 'ERROR', message: 'Can not perform this action', data: @section.errors.full_messages}, status: :unprocessable_entity
+			end
+        end
+      end
+
+	  def delete_section
+        user = current_user
+        if user.admin?
+			# Find the SurveySection by _id
+            @section = SurveySection.find(params[:id])
+            
+            # Delete the SurveySection
+            if @section.destroy
+              render json: {status: 'SUCCESS', message: 'SurveySection deleted successfully', data: @section}, status: :ok
+            else
+              render json: {status: 'ERROR', message: 'Failed to delete SurveySection', data: @section.errors.full_messages}, status: :unprocessable_entity
+            end
+		end
+	  end
+
       def update_question
         user = current_user
         if user.admin?

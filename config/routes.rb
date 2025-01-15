@@ -212,6 +212,8 @@ Rails.application.routes.draw do
             post 'update_survey', to: 'survey#update_survey', defaults: {format: 'json'}
             get 'questions/:id', to: 'survey_questions#questions_list'
             post 'update_section', to: 'survey_questions#update_section', defaults: {format: 'json'}
+			      post 'section', to: 'survey_questions#create_section', defaults: {format: 'json'}
+			      delete 'section', to: 'survey_questions#delete_section', defaults: {format: 'json'}
             post 'update_question', to: 'survey_questions#update_question', defaults: {format: 'json'}
             get 'responses_user/:id', to: 'survey_responses#survey_responses'
             post 'respond/:id_survey/:id_response', to: 'survey_responses#respond_answers'
