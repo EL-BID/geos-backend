@@ -211,10 +211,16 @@ Rails.application.routes.draw do
             get :surveys_list
             post 'update_survey', to: 'survey#update_survey', defaults: {format: 'json'}
             get 'questions/:id', to: 'survey_questions#questions_list'
+            #Sections CRUD
+            get 'sections/:id', to: 'survey_questions#get_section'
             post 'update_section', to: 'survey_questions#update_section', defaults: {format: 'json'}
-			      post 'section', to: 'survey_questions#create_section', defaults: {format: 'json'}
-			      delete 'section', to: 'survey_questions#delete_section', defaults: {format: 'json'}
+			      post 'sections', to: 'survey_questions#create_section', defaults: {format: 'json'}
+			      patch 'sections/:id', to: 'survey_questions#update_section_partial', defaults: {format: 'json'}
+			      delete 'sections', to: 'survey_questions#delete_section', defaults: {format: 'json'}
+            #Questions CRUD
+			      post 'questions', to: 'survey_questions#create_question', defaults: {format: 'json'}
             post 'update_question', to: 'survey_questions#update_question', defaults: {format: 'json'}
+            #---
             get 'responses_user/:id', to: 'survey_responses#survey_responses'
             post 'respond/:id_survey/:id_response', to: 'survey_responses#respond_answers'
             post 'generate_scores/:id_survey/:id_response', to: 'api#generate_scores'
