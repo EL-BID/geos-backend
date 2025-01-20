@@ -28,23 +28,21 @@ module Api
           :school_id,
           :share_personal_data,
           :share_work_data,
-		  :tos,
-		  teacher_data: [
-			:formation_level,
-			:year_finished_formation,
-			:initial_formation,
-			:internship_practice,
-			:institution_initial_formation,
-			:tech_in_teaching,
-			:course_modality,
-			:formation_in_tech,
-			:years_teaching,
-			:years_using_tech,
-			tech_application: []
-		  ],
-          principal_data: [
-
-          ]
+          :tos,
+          teacher_data: [
+              :formation_level,
+              :year_finished_formation,
+              :initial_formation,
+              :internship_practice,
+              :institution_initial_formation,
+              :tech_in_teaching,
+              :course_modality,
+              :formation_in_tech,
+              :years_teaching,
+              :years_using_tech,
+              tech_application: []
+          ],
+          principal_data: []
         ) 
       end
 
@@ -317,21 +315,31 @@ module Api
 
         if(!@user.share_personal_data)
           @user.name = "Anonymous"
-		  @user.born = "1900-01-01"
+		      @user.born = "1900-01-01"
           @user.gender = "didnt_say"
         end
 
         if(!@user.share_work_data)
           @institution = Institution.find_by(name: 'Dummy Affiliation For Unaffiliated Users')
           @user.institution = @institution
-          @school = School.find_by(name: 'Dummy School For Unaffiliated Users')
-          @user.school = @school
-          @country = Country.find_by(name: 'Dummy Country For Unaffiliated Users')
-          @user.country_id = BSON::ObjectId.from_string(@country[:id])
           @user.affiliation_id = BSON::ObjectId.from_string(@institution[:id])
           @user.affiliation_name = @institution[:name]
+          
+          @school = School.find_by(name: 'Dummy School For Unaffiliated Users')
+          @user.school = @school
+          @user.school_id = BSON::ObjectId.from_string(@school[:id])
+          
+          @country = Country.find_by(name: 'Dummy Country For Unaffiliated Users')
+          @user.country_id = BSON::ObjectId.from_string(@country[:id])
+          
           province = Province.find_by(name: 'Dummy Province For Unaffiliated Users')
           @user.province_id = BSON::ObjectId.from_string(province[:id])
+          
+          state = State.find_by(name: 'Dummy State For Unaffiliated Users')
+          @user.state_id = BSON::ObjectId.from_string(state[:id])
+          
+          city = State.find_by(name: 'Dummy City For Unaffiliated Users')
+          @user.city_id = BSON::ObjectId.from_string(city[:id])
         else
           if @user.admin_state? || @user.admin_city? || @user.teacher? || @user.principal?
             # @institution = Institution.find_by(id: BSON::ObjectId.from_string(user_params[:affiliation_id]))
