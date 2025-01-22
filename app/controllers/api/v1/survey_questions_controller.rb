@@ -2,6 +2,24 @@ module Api
   module V1
     class SurveyQuestionsController < ApiController
 
+		def get_all 
+			user = current_user
+			section_id = params[:idSection]
+
+			@questions =  SurveyQuestion.where(:survey_section_id => section_id).order(:question_order => 1)
+		
+			puts "-------@questions----------"
+			puts section_id
+			puts @questions
+			puts "-----------------"
+
+			if @questions.empty?
+			  render json: []
+			else
+			  render json: @questions.to_json
+			end
+		end
+
 		def get_section
 			user = current_user
 			if user.admin?
@@ -170,39 +188,33 @@ module Api
 
 		def questions_list
 		
-		@lang = params[:lang]
-				
-		school = current_user.school
-		survey_id = params[:id]
-		@survey = Survey.find_by(:id => survey_id)
+			@lang = params[:lang]
+					
+			school = current_user.school
+			survey_id = params[:id]
+			@survey = Survey.find_by(:id => survey_id)
 
-		@sections = SurveySection.where(:survey_id => survey_id, :user_type => current_user.profile).order(:position => 1)
-		#@sections = SurveySection.where(:survey_id => survey_id, :survey_section_id => BSON::ObjectId.from_string("5c548592a3e97a0004a74a63"), :user_type => current_user.profile).order(:position => 1)
-
-		if @sections.length == 0
 			@sections = SurveySection.where(:survey_id => survey_id).order(:position => 1)
-		end
 
-
-		if !school.nil?
-			type_role = school.type
-			@questions = SurveyQuestion.any_of({:type_role.in => [type_role], :survey_id => survey_id}, {:type_role.in => ["",nil], :survey_id => survey_id}).order(:page => 1, :name => 1, :_id => 1)
-		else
-			@questions = SurveyQuestion.where({:survey_id => survey_id}).order(:page => 1, :name => 1, :_id => 1)
-		end
-
-		if @survey.shuffle_options
-			shuffled_questions = Array.new
-			@questions.each do |question|
-			question.survey_question_description = question.survey_question_description.shuffle
-			shuffled_questions.push(question) 
+			if !school.nil?
+				type_role = school.type
+				@questions = SurveyQuestion.any_of({:type_role.in => [type_role], :survey_id => survey_id}, {:type_role.in => ["",nil], :survey_id => survey_id}).order(:page => 1, :name => 1, :_id => 1)
+			else
+				@questions = SurveyQuestion.where({:survey_id => survey_id}).order(:page => 1, :name => 1, :_id => 1)
 			end
-			@questions = Array.new(shuffled_questions)
-		end
 
-		respond_to do |format|
-			format.json
-		end
+			if @survey.shuffle_options
+				shuffled_questions = Array.new
+				@questions.each do |question|
+				question.survey_question_description = question.survey_question_description.shuffle
+				shuffled_questions.push(question) 
+				end
+				@questions = Array.new(shuffled_questions)
+			end
+
+			respond_to do |format|
+				format.json
+			end
 		end
 
 		def questions_with_answers

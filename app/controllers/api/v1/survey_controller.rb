@@ -61,6 +61,10 @@ module Api
             @user_answers = SurveyResponse.where(:user => user, :survey.in => survey_ids).inverse_subimitted_order.to_a
           end
 
+          puts "----------------------------"
+          puts @survey_types
+          puts "----------------------------"
+
           @survey_types.each do |type|
             @actual_survey = get_actual_survey(@surveys.to_a, type)
             temp_schedules = Array.new
@@ -232,7 +236,6 @@ module Api
         surveys.find{ |survey| survey.type == type && survey.active == true }
       end
 
-
       def find_date_survey
         user = current_user
         type = nil
@@ -248,6 +251,15 @@ module Api
         SurveySchedule.includes(:survey).where(:type => {"$in" => typesOfSchools}, :affiliation_id => user.affiliation_id, :missing_days.nin => ['']).invese_created_order
       end
 
+      def get_all_sections
+        @lang = params[:lang]
+        user = current_user
+        survey_id = params[:idSurvey]
+
+        @sections = SurveySection.where(:survey_id => survey_id).order(:position => 1)
+
+        render json: @sections.to_json
+      end
 
     end
   end

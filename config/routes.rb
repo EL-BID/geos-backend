@@ -202,8 +202,10 @@ Rails.application.routes.draw do
       # resources :schools, path: 'schools'
       get :school_regionals, to: 'schools#regionals'
 
-
-
+      get 'sections/:idSection/questions', to: 'survey_questions#get_all', defaults: {format: 'json'}
+      get 'surveys/', to: 'survey#surveys_list', defaults: {format: 'json'}
+      get 'surveys/:idSurvey/sections', to: 'survey#get_all_sections', defaults: {format: 'json'}
+      
       defaults format: :json do
         resources :survey do
           collection do
