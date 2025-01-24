@@ -205,6 +205,9 @@ Rails.application.routes.draw do
       get 'sections/:idSection/questions', to: 'survey_questions#get_all', defaults: {format: 'json'}
       get 'surveys/', to: 'survey#surveys_list', defaults: {format: 'json'}
       get 'surveys/:idSurvey/sections', to: 'survey#get_all_sections', defaults: {format: 'json'}
+      get 'surveys/:idSurvey/questions', to: 'survey#get_all_questions', defaults: {format: 'json'}
+      get 'surveys/:idSurvey/answers', to: 'survey#get_answers', defaults: {format: 'json'}
+      post 'surveys/:idSurvey/answers', to: 'survey#store_answers', defaults: {format: 'json'}
       
       defaults format: :json do
         resources :survey do

@@ -256,10 +256,90 @@ module Api
         user = current_user
         survey_id = params[:idSurvey]
 
-        @sections = SurveySection.where(:survey_id => survey_id).order(:position => 1)
+        @items = SurveySection.where(:survey_id => survey_id).order(:position => 1)
 
-        render json: @sections.to_json
+        render json: @items.to_json
       end
+
+      def get_all_questions
+        @lang = params[:lang]
+        user = current_user
+        survey_id = params[:idSurvey]
+
+        @items = SurveyQuestion.where(:survey_id => survey_id).order(:question_order => 1)
+
+        render json: @items.to_json
+      end
+
+      def store_answers
+        user = current_user
+        idUser = params[:idUser]
+        idSurvey = params[:idSurvey]
+        idSchedule	 = params[:idSchedule	]
+        answers = params[:answers]
+
+        #Permited params
+        params.permit(:idUser, :idSurvey, :idSchedule, :answers)
+
+        #Create Response for this user if it does not exists
+        @resp = SurveyResponseSimple.where(:user_id => idUser, :survey_id => idSurvey, :survey_schedule_id => idSchedule).first
+        if @resp.nil?
+          @resp = SurveyResponseSimple.new
+          @resp.user_id = idUser
+          @resp.survey_id = idSurvey
+          @resp.survey_schedule_id = idSchedule
+          @resp.school_id = user.school_id
+          @resp.status = "Complete"
+        else
+          @resp.number_of_tries = @resp.number_of_tries + 1
+        end
+
+        if @resp.save
+        
+          #Delete all resonse answeres for this answer, new ones will be loaded
+          ResponseAnswerSimple.where(:survey_response_id => @resp.id).delete_all
+
+          #Answers format: {[idQuestion]: [idOptions]}
+          answers.each do |key, value|
+            @resp_answer = ResponseAnswerSimple.new
+            @resp_answer.survey_response_id = @resp.id
+            @resp_answer.survey_question_id = key
+            @resp_answer.options = value
+            @resp_answer.user_id = idUser
+            @resp_answer.school_id = user.school_id
+            @resp_answer.save
+          end
+
+          render json: @resp.to_json
+        else
+          render json: {status: 'ERROR', message:'Can not perform this action', data: nil},status: :unprocessable_entity
+        end
+
+      end
+
+      def get_answers
+        user = current_user
+        idSurvey = params[:idSurvey]
+
+        @answer = SurveyResponseSimple.where(:user_id => user.id, :survey_id => idSurvey).first
+        @quesitonResponses = []
+        if @answer.nil?
+          @answer = SurveyResponseSimple.new
+          @answer.user_id = user.id
+          @answer.survey_id = idSurvey
+          @answer.status = "Started"
+        elsif
+          @quesitonResponses = ResponseAnswerSimple.where(:survey_response_id => @answer.id)
+        end
+
+        result = {
+          survey_response: @answer,
+          question_responses: @quesitonResponses
+        }
+
+        render json: result.to_json
+      end
+
 
     end
   end
