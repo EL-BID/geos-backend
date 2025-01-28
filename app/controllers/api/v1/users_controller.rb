@@ -338,7 +338,7 @@ module Api
           state = State.find_by(name: 'Dummy State For Unaffiliated Users')
           @user.state_id = BSON::ObjectId.from_string(state[:id])
           
-          city = State.find_by(name: 'Dummy City For Unaffiliated Users')
+          city = City.find_by(name: 'Dummy City For Unaffiliated Users')
           @user.city_id = BSON::ObjectId.from_string(city[:id])
         else
           if @user.admin_state? || @user.admin_city? || @user.teacher? || @user.principal?
