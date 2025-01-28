@@ -161,7 +161,7 @@ module Api
 
         if(params['access_token'].present?)
           user = User.find_by(authenticity_token: params['access_token'])
-          if(user.admin?)
+          if(user&.admin?)
             countries = Country.all.order(:name => 1)
           else
             countries = Country.where.not(name: dummyname).order(:name => 1)
@@ -187,7 +187,7 @@ module Api
           user = User.find_by(authenticity_token: params['access_token'])
           if(user.admin_country?)
             institutions = Institution.where(:country_id => user['country_id']).where.not(name: dummyname).order(:name => 1)
-          elsif (user.admin?)
+          elsif (user&.admin?)
             if(params['country_id'].present?)
               institutions = Institution.where(country_id: BSON::ObjectId.from_string(params[:country_id])).order(:name => 1)
             else
@@ -222,7 +222,7 @@ module Api
 
         if(params['access_token'].present?)
           user = User.find_by(authenticity_token: params['access_token'])
-          if(user.admin?)
+          if(user&.admin?)
             if params[:country_id]
               provincies = Province.where(:country_id => BSON::ObjectId.from_string(params[:country_id])).order(:name => 1)
             else
@@ -256,7 +256,7 @@ module Api
 
         if(params['access_token'].present?)
           user = User.find_by(authenticity_token: params['access_token'])
-          if(user.admin?)
+          if(user&.admin?)
             if params[:country_id] && params[:province_id]
               states = State.where(:country_id => BSON::ObjectId.from_string(params[:country_id]),
                                     :province_id => BSON::ObjectId.from_string(params[:province_id])).order(:name => 1)
@@ -296,7 +296,7 @@ module Api
 
         if(params['access_token'].present?)
           user = User.find_by(authenticity_token: params['access_token'])
-          if(user.admin?)
+          if(user&.admin?)
             if params[:country_id] && params[:province_id] && params[:state_id]
               cities = City.where(:country_id => BSON::ObjectId.from_string(params[:country_id]),
                                   :province_id => BSON::ObjectId.from_string(params[:province_id]),

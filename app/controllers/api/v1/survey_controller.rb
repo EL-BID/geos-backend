@@ -5,6 +5,23 @@ module Api
       # before_action :set_school, only: [:survey_response, :update, :show, :destroy]
       before_action :authenticate_user!, except: [:surveys_list]
 
+      def get_survey 
+        user = current_user
+        survey_id = params[:idSurvey]
+        if(user) 
+          @survey = Survey.find(survey_id)
+          if(@survey)
+            @survey.schedule = SurveySchedule.where(:survey_id => survey_id).first
+          else
+            @survey.schedule = []
+          end
+          render json: @survey.to_json
+        else
+          render json: {status: 'ERROR', message:'Unauthorized', data: nil},status: :unauthorized
+        end
+      end
+
+
       def surveys_list
         @lang = params[:lang]
         user = current_user
