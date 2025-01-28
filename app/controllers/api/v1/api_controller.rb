@@ -669,7 +669,7 @@ module Api
         
         dummy = "Dummy Affiliation For Unaffiliated Users"
 
-        if(@user.institution.name == dummy)
+        if(@user.affiliation_name == dummy)
           @devolutiveT['label.city'] = ""
           @devolutiveT['label.state'] = ""
           @devolutiveT['label.school'] = ""
