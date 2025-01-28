@@ -14,7 +14,12 @@ class UserMailer < Devise::Mailer
   
   # usermail (reset_password)
   def send_reset_password_instructions(user, translation)
+    raw, hashed = Devise.token_generator.generate(User, :reset_password_token) 
+    user.reset_password_token   = hashed
+    user.reset_password_sent_at = Time.now.utc
+    user.save(validate: false)
     @user = user
+    @token = raw
     @translation = translation
     mail(to: @user.email, from: ENV['MAIL_FROM'], subject: translation['subject'])
   end
