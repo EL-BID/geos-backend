@@ -38,6 +38,37 @@ module Api
           end
         end
       end
+      
+      def update_translation_by_lang
+        user = current_user
+        if user&.admin?
+
+          params.permit(:access_token, :lang, :format, :translatiom, :data)
+
+          dasData = JSON.parse(params[:data])
+          targetLang = dasData[:lang]
+
+          #remove conflicting fields from data
+          dasData.delete(:_id)
+          dasData.delete(:created_at)
+          dasData.delete(:updated_at)
+
+          #Delete the old translation by language
+          Translation.where(lang: targetLang).destroy_all
+
+          ##Insert the new Data Translation
+          #trans = Translation.new(dasData)
+
+          if trans.save(validate: false)
+            render json: {status: 'SUCCESS', message:'Updated translate', data:trans},status: :ok
+          else
+            render json: {status: 'ERROR', message:'Translate not update', data:nil},status: :unprocessable_entity
+          end
+        else
+          render json: {status: 'ERROR', message:'User not admin', data:nil},status: :unauthorized
+        end
+      end
+      
       private
       def translations_params
         params.require(:translation).permit(translation: params[:translation].keys)

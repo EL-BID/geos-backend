@@ -8,6 +8,25 @@
 - resultado_cidadania = nil
 - resultado_desenvolvimento = nil
 
+-# Define the desired order of sub-sections for each area
+
+- if @lang == 'es'
+  - pedagogia_order = ["PRÁCTICA PEDAGÓGICA", "EVALUACIÓN", "PERSONALIZACIÓN", "CURADURÍA Y CREACIÓN"]
+  - cidadania_order = ["USO RESPONSABLE", "USO SEGURO", "USO CRÍTICO", "INCLUSIÓN"]
+  - desenvolvimento_order = ["AUTODESARROLLO", "AUTOEVALUACIÓN", "COMPARTIR", "COMUNICACIÓN"]
+- elsif @lang == 'fr'
+  - pedagogia_order = ["PRATIQUE PÉDAGOGIQUE", "ÉVALUATION", "PERSONNALISATION", "ORGANISATION ET CRÉATION"]
+  - cidadania_order = ["UTILISATION RESPONSABLE", "UTILISATION SÉCURISÉE", "UTILISATION CRITIQUE", "INCLUSION"]
+  - desenvolvimento_order = ["AUTO-DÉVELOPPEMENT", "AUTO-ÉVALUATION", "PARTAGE", "COMMUNICATION"]
+- elsif @lang == 'pt-BR'
+  - pedagogia_order = ["PRÁTICA PEDAGÓGICA", "AVALIAÇÃO", "PERSONALIZAÇÃO", "CURADORIA E CRIAÇÃO"]
+  - cidadania_order = ["USO RESPONSÁVEL", "USO SEGURO", "USO CRÍTICO", "INCLUSÃO"]
+  - desenvolvimento_order = ["AUTODESENVOLVIMENTO", "AUTOAVALIAÇÃO", "COMPARTILHAMENTO", "COMUNICAÇÃO"]
+- else
+  - pedagogia_order = ["TEACHING PRACTICE", "EVALUATION", "PERSONALIZATION", "CURATION AND CREATION"]
+  - cidadania_order = ["RESPONSIBLE USE", "SAFE USE", "CRITICAL USE", "INCLUSION"]
+  - desenvolvimento_order = ["SELF-DEVELOPMENT", "SELF-ASSESSMENT", "SHARING", "COMMUNICATION"]
+
 -#%link(rel="stylesheet" type="text/css" href="assets/stylesheets/api.css")
 
 - @feedbacks.delete_if do |feedback|
@@ -263,6 +282,8 @@
     .col-xs-8.col-xs-offset-2.detalhamento
       %p #{process_text(@devolutiveT['label.area_detail'])}
 
+-# PEDAGOGIA
+
 .area.pedagogica.container-fluid.page-break
   .row.cabecalho
     .col-xs-10
@@ -302,30 +323,23 @@
             %h2 #{process_text(@devolutiveT['label.div.txt3'])}
             %p.detalhamento #{process_text(resultado_pedadogica.body.to_a[2][1].to_s.html_safe)}
 
+-# Select the feedbacks that belong to the pedagogica group
 - @fb_filtrado = @feedbacks.select { |fb|  fb.group['name'].parameterize == 'pedagogica' }
+
+-# Sort the @fb_filtrado array by the title attribute
+- @fb_filtrado.sort_by! { |obj| pedagogia_order.index(obj.title) || Float::INFINITY }
+
 - @fb_filtrado.each_with_index do |fb, index|
   - if index % 2 == 0
     - fb_left = fb
     - fb_right = @fb_filtrado[index + 1]
     .competencia.container-fluid.with-padding.page-break{class: "#{fb.group['name'].parameterize}"}
       .row
+
+        -# TOP ITEM
         .col-xs-12
           %h1 #{process_text(@devolutiveT['label.results_by_competence'])} - #{process_text(fb_left.title)}
         .col-xs-8
-          -# .item
-            .icone
-              =wicked_pdf_image_tag("devolutive/pin.svg")
-            .conteudo
-              %h2 #{process_text(@devolutiveT['label.div.txt1'])}
-              %p.detalhamento #{process_text(fb_left.body.to_a[0][1].to_s.html_safe)}
-          -# .clear
-          -# .item
-            .icone
-              =wicked_pdf_image_tag("devolutive/lampada.svg")
-            .conteudo
-              %h2 #{process_text(@devolutiveT['label.div.txt2'])}
-              %p.detalhamento #{process_text(fb_left.body.to_a[1][1].to_s.html_safe)}
-          -# .clear
           .item
             .icone
               =wicked_pdf_image_tag("devolutive/grafico.svg")
@@ -341,6 +355,8 @@
             %span #{process_text(desc_nivel[fb_left.page - 1])}
         .col-xs-12
           %hr.divisor
+
+        -# BOTTOM ITEM
         .col-xs-12
           %h1 #{process_text(@devolutiveT['label.results_by_competence'])} - #{process_text(fb_right.title)}
         .col-xs-4
@@ -350,18 +366,6 @@
           .nivel
             %span #{process_text(desc_nivel[fb_right.page - 1])}
         .col-xs-8
-          -# .item
-            .icone
-              =wicked_pdf_image_tag("devolutive/pin.svg")
-            .conteudo
-              %h2 #{process_text(@devolutiveT['label.div.txt1'])}
-              %p.detalhamento #{process_text(fb_right.body.to_a[0][1].to_s.html_safe)}
-          -# .item
-            .icone
-              =wicked_pdf_image_tag("devolutive/lampada.svg")
-            .conteudo
-              %h2 #{process_text(@devolutiveT['label.div.txt2'])}
-              %p.detalhamento #{process_text(fb_right.body.to_a[1][1].to_s.html_safe)}
           .item.right
             .icone
               =wicked_pdf_image_tag("devolutive/grafico.svg")
@@ -369,6 +373,8 @@
               %h2 #{process_text(@devolutiveT['label.div.txt3'])}
               %p.detalhamento #{process_text(fb_right.body.to_a[0][1].to_s.html_safe)}
 
+
+-# CIUDADANIA DIGITAL
 .area.cidadania-digital.container-fluid.page-break
   .row.cabecalho
     .col-xs-10
@@ -408,7 +414,13 @@
             %h2 #{process_text(@devolutiveT['label.div.txt3'])}
             %p.detalhamento #{process_text(resultado_cidadania.body.to_a[2][1].to_s.html_safe)}
 
+
+-# Select the feedbacks that belong to the cidadania-digital group
 - @fb_filtrado = @feedbacks.select { |fb|  fb.group['name'].parameterize == 'cidadania-digital' }
+
+-# Sort the @fb_filtrado array by the title attribute
+- @fb_filtrado.sort_by! { |obj| cidadania_order.index(obj.title) || Float::INFINITY }
+
 - @fb_filtrado.each_with_index do |fb, index|
   - if index % 2 == 0
     - fb_left = fb
@@ -475,6 +487,8 @@
               %h2 #{process_text(@devolutiveT['label.div.txt3'])}
               %p.detalhamento #{process_text(fb_right.body.to_a[0][1].to_s.html_safe)}
 
+
+-# PROFESIONAL
 .area.desenvolvimento-profissional.container-fluid.page-break
   .row.cabecalho
     .col-xs-10
@@ -514,7 +528,13 @@
             %h2 #{process_text(@devolutiveT['label.div.txt3'])}
             %p.detalhamento #{process_text(resultado_desenvolvimento.body.to_a[2][1].to_s.html_safe)}
 
+
+-# Select the feedbacks that belong to the desenvolvimento-profissional group
 - @fb_filtrado = @feedbacks.select { |fb|  fb.group['name'].parameterize == 'desenvolvimento-profissional' }
+
+-# Sort the @fb_filtrado array by the title attribute
+- @fb_filtrado.sort_by! { |obj| desenvolvimento_order.index(obj.title) || Float::INFINITY }
+
 - @fb_filtrado.each_with_index do |fb, index|
   - if index % 2 == 0
     - fb_left = fb

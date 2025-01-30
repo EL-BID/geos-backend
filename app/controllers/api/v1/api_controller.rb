@@ -688,7 +688,6 @@ module Api
         #@logoHeaderSecondary = wicked_pdf_asset_base64("#{ENV['FRONTEND_URL']}/images/theme/logo-header-secondary-#{@lang}.png")
         @logoFooter ="#{ENV['FRONTEND_URL']}/images/theme/logo-footer.png"
 
-        
         file_type = 'haml'
         orientation = 'Landscape'
         
@@ -696,7 +695,6 @@ module Api
           file_type = 'erb'
           orientation = 'Portrait'
         end
-               
 
         render pdf: 'survey_response',
           layout: 'pdf', 
