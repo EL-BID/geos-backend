@@ -2276,6 +2276,7 @@
 		"no": "No",
 		"acceptTermsOfUse": "He leido y acepto los {termsOfUseLink} de la Guía Edutec.",
 		"termsOfUse": "Términos y condiciones, y el Aviso de privacidad",
+		"privacyNotice": "Aviso de privacidad",
 		"termsOfUseAndDataSharing": "Condiciones de uso e intercambio de datos",
 		"btnSave": "Guardar",
 		"title_login_data": "Datos de acceso",
