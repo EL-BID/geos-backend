@@ -37,3 +37,8 @@ yarn-debug.log*
 .env
 Gemfile.lock
 sonar-project.properties
+app/assets/images/devolutive/imgBgHome.png
+app/assets/images/devolutive/imgLogoFooter.png
+app/assets/images/devolutive/imgLogoFooterSec.png
+app/assets/images/devolutive/imgLogoHeader.png
+app/assets/images/devolutive/imgLogoHeaderSec.png

@@ -3,15 +3,19 @@ module Api
     class TranslationsController < ApiController
       before_action :authenticate_user!, only: [:save_translation]
       
-      # Search for the translated attributes of a language
-      # @param: lang
-      # @return [JSON]: status, message and data (with all the attributes translated)
-      def get_translation_by_lang
-        translation = Translation.where(lang: params['lang'])
-        if (!translation.nil?)
-          render json: {status: 'SUCCESS', message:'Translation found', data:translation},status: :ok
+        #Read the JSON tranlation file located at app/assets/translations and respond it
+        def get_translation_by_lang
+        
+        params.permit(:lang, :format)
+        lang = params[:lang]
+
+        file_path = "app/assets/translations/#{lang}.json"
+
+        if File.exist?(file_path)
+          file = File.read(file_path)
+          render json: {status: 'SUCCESS', message: 'Translation found', data: JSON.parse("[#{file}]")}, status: :ok
         else
-          render json: {status: 'ERROR', message:'Translation not found', data:nil},status: :not_found
+          render json: {status: 'ERROR', message: 'Translation file not found', data: []}, status: :not_found
         end
       end
 

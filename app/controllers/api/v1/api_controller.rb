@@ -6,6 +6,12 @@ module Api
       respond_to :json, :pdf, :xls
       before_action :authenticate_user!, only: [:old_survey_response, :survey_answer, :survey_answers, :survey_answers_details, :survey_response, :change_password, :user_institution]
       before_action :authenticate_admin!, only: [:change_user_password, :country_csv]
+      before_action :set_locale
+
+      def set_locale
+        @lang = params[:lang] || I18n.default_locale
+        I18n.locale = @lang
+      end
 
       def country_csv
         user = current_user

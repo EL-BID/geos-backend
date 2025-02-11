@@ -2,7 +2,6 @@ module Api
   module V1
     class SurveyController < ApiController
 
-      # before_action :set_school, only: [:survey_response, :update, :show, :destroy]
       before_action :authenticate_user!, except: [:surveys_list]
 
       def get_survey 
@@ -269,7 +268,6 @@ module Api
       end
 
       def get_all_sections
-        @lang = params[:lang]
         user = current_user
         survey_id = params[:idSurvey]
 
@@ -279,7 +277,6 @@ module Api
       end
 
       def get_all_questions
-        @lang = params[:lang]
         user = current_user
         survey_id = params[:idSurvey]
 
