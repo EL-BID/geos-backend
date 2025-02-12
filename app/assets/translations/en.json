@@ -2207,39 +2207,45 @@
 		"professionalsData": "Professional Data",
 		"formation": "Formation",
 		"label": {
-			"name": "Name",
-			"cpf": "National identity document",
-			"birthDate": "Date of birth",
-			"email": "E-mail",
-			"emailConfirmation": "Confirm your e-mail",
+			"name": "Full Name",
+			"cpf": "National Identity Document",
+			"birthDate": "Date of Birth",
+			"email": "Email",
+			"emailConfirmation": "Confirm your Email",
 			"password": "Password",
-			"confirmPassword": "Confirm password",
+			"confirmPassword": "Confirm Password",
 			"region": "Country",
-			"province": "Geographic level 2",
-			"state": "Geographic level 3",
-			"teachingStages": "Educational stages",
-			"knowledges": "Knowledge Area/Curricular Components",
-			"formation": "During your career, have you done or are you doing any training in innovation and technology?",
-			"formationLevel": "What is your education level?",
-			"gender": "What is your gender?",
-			"initial_formation": "What is your original major?",
-			"final_year_of_initial_formation": "What year did you complete your original major?",
-			"internship_practice": "During your original major, did you intern?",
-			"institution_initial_formation": "What university did you attend (original major)?",
-			"technology_in_teaching_and_learning": "Did you have any subject or content on the use of technology in teaching and learning in your original major?",
-			"course_modality": "What was the modality of your original major?",
-			"cont_educ_in_the_use_of_digital_technologies": "Did you attend further education courses on the use of digital technologies in teaching and learning processes in the past 2 years?",
-			"years_teaching": "How long have you been teaching?",
-			"years_of_uses_technology_for_teaching": "How long have you been using technology in teaching and learning processes?",
-			"technology_application": "How is technology applied in teaching and learning processes?"
+			"province": "Geographic Level 2",
+			"state": "Geographic Level 3",
+			"city": "Geographic Level 4",
+			"school": "Educational Center",
+			"teachingStages": "Education Stages",
+			"knowledges": "Knowledge Area / Curriculum Component",
+			"formation": "Throughout your career, have you completed or are you currently undergoing any training in innovation and technology?",
+			"formationLevel": "What is your highest level of education?",
+			"gender": "Which gender do you identify with?",
+			"formation_level": "What is your highest level of education attained?",
+			"year_finished_formation": "What was the year of completion of your initial teacher training?",
+			"initial_formation": "Your initial teacher training was in:",
+			"final_year_of_initial_formation": "What was the year of completion of your initial teacher training?",
+			"internship_practice": "In your initial teacher training, did you have internship practice?",
+			"institution_initial_formation": "What is the educational institution where you studied (initial teacher training)?",
+			"tech_in_teaching": "Did you have any discipline or content for the use of technology in teaching and learning in your initial teacher training?",
+			"course_modality": "What was the modality of your initial teacher training?",
+			"formation_in_tech": "Have you participated in continuous training for the use of digital technologies in teaching and learning processes in the last 2 years?",
+			"years_teaching": "How many years have you been teaching?",
+			"years_using_tech": "How many years have you been using technology in teaching and learning processes?",
+			"tech_application": "How is technology applied in teaching and learning processes?"
 		},
-		"description": {
+		"help": {
+			"pleaseSelect": "Please select",
+			"password": "The password must be at least 6 characters",
+			"confirmPassword": "Repeat the password again",
 			"cpf": "Enter only the numbers",
-			"birthDate": "Correct format DD/MM/YYYY",
-			"email": "Enter a valid e-mail"
+			"email": "Enter a valid email address",
+			"year_finished_formation": "Please enter only the year.",
+			"format": "Format"
 		},
-		"selectRegion": "Select an option",
-		"selectState": "Select an option",
 		"loading": "Loading...",
 		"noOptions": "No options.",
 		"placeholderSelectOptions": "Select one or more options",
@@ -2247,17 +2253,19 @@
 		"yes": "Yes",
 		"no": "No",
 		"acceptTermsOfUse": "I have read and accept the {termsOfUseLink} of the Edutec Guide.",
-		"termsOfUse": "Terms and Conditions",
+		"termsOfUse": "Terms and conditions, and the Privacy Notice",
 		"privacyNotice": "Privacy Notice",
 		"termsOfUseAndDataSharing": "Terms of Use and Data Sharing",
 		"btnSave": "Save",
-		"shareData": "Sharing data with the educational network",
+		"title_login_data": "Access data",
+		"share_personal_data": "I agree to share my personal data with the Department of Education",
+		"share_personal_data_disclaimer": "First and last name and date of birth will not be shared",
 		"radioAcceptshareData": "I agree to share my data, including my name, with the Department of Education",
 		"radioNoAcceptshareData": "I prefer to share my data anonymously with the Department of Education",
 		"radioNoAcceptshareDataDescription": "If the secretariat has access to the nominal data of the teachers, it is possible to identify the demands and interests of each one and, with this, design targeted and meaningful training. Are you sure you prefer to share anonymously?",
 		"notificationNoSharingAnswers": "If the secretariat has access to the nominal data of the teachers, it is possible to identify the demands and interests of each one and, with this, design targeted and meaningful training. Are you sure you prefer to share anonymously?",
 		"register": "REGISTER",
-		"termsOfUseModalTitle": "Terms of Use - EduTec Guide Digital Self-Assessment of Teachers",
+		"termsOfUseModalTitle": "Terms of use - Edutec Guide Digital Competence Diagnosis for Teachers",
 		"titleVerificationModal": "CHECKING REGISTRATION DATA",
 		"questionVerificationModal": "Are you a teacher at this school?",
 		"placeholderStages": "Select an option",
@@ -2268,62 +2276,82 @@
 		"deleteAccount": "WISH TO DELETE MY ACCOUNT",
 		"noLink": "I would not like to identify my professional data",
 		"withLink": "I would like to identify my professional data\n",
-		"gender": {
-			"masculine": "Male",
-			"feminine": "Female",
-			"others": "Other",
-			"preferNotToSay": "I’d rather not say"
+		"GenderOptns": {
+			"male": "Male",
+			"female": "Female",
+			"other": "Other",
+			"didnt_say": "Prefer not to say"
 		},
-		"initial_formation": {
-			"options": ""
+		"FormationLevelsOptns": {
+			"graduate": "High School",
+			"bachelor_degree": "Bachelor's Degree",
+			"teacher_graduate": "Teacher Graduate",
+			"postgraduate": "Postgraduate Course",
+			"masters": "Master's",
+			"phd": "Doctorate"
 		},
-		"internship_practice": {
-			"0": "No, I didn’t intern",
-			"1": "Yes, but only for observation purposes",
-			"2": "Yes, but digital technologies and materials were not used in the teaching and learning processes",
-			"3": "Yes, and digital technologies and materials were not used in the teaching and learning processes were widely used"
+		"InitialFormationOptns": {
+			"early_childhood_teacher": "Early Childhood Teacher",
+			"primary_education_teacher": "Primary Education Teacher",
+			"secondary_education_teacher": "Secondary Education Teacher",
+			"technical_teacher": "Technical Teacher",
+			"other": "Other"
 		},
-		"technology_in_teaching_and_learning": {
-			"yes": "Yes",
+		"InternshipPracticeOptns": {
+			"no": "I did not have an internship practice",
+			"yes_observational": "Yes, only observational",
+			"yes_non_explorative": "Yes, but the use of technologies and digital materials in teaching and learning processes was not explored",
+			"yes_explorative": "Yes, and the use of technologies and digital materials in teaching and learning processes was widely explored"
+		},
+		"CourseModalityOptns": {
+			"on_site": "On-site",
+			"online": "Online",
+			"mixed": "Both",
+			"none": "None"
+		},
+		"FormationInTechOptns": {
+			"on_site": "Yes, on-site",
+			"online": "Yes, online",
+			"mixed": "Yes, both",
 			"no": "No"
 		},
-		"course_modality": {
-			"inPerson": "In-person",
-			"blended": "Hybrid",
-			"fromADistance": "Remote"
+		"YearsTeachingOptns": {
+			"between_1_and_3": "Between 1 and 3 years",
+			"between_4_and_6": "Between 4 and 6 years",
+			"between_7_and_9": "Between 7 and 9 years",
+			"more_than_10_years": "More than 10 years"
 		},
-		"cont_educ_in_the_use_of_digital_technologies": {
-			"0": "This is a new subject I haven’t considered yet",
-			"1": "Not yet, but I’m interested in it",
-			"2": "I have already attended one or two further education courses on this subject",
-			"3": "I have attended several further education courses on this subject, including online",
-			"4": "I often attend further education courses on this subject, including online",
-			"5": "Yes, I attend further education courses on this subject and have a specialization degree (graduate course) in this field",
-			"6": "Yes, I attend further education courses on this subject and have a specialization degree (Master’s or Doctor’s degree) in this field"
+		"YearsUsingTechOptns": {
+			"no": "I don't use",
+			"between_1_and_3": "Between 1 and 3 years",
+			"between_4_and_6": "Between 4 and 6 years",
+			"between_7_and_9": "Between 7 and 9 years",
+			"more_than_10_years": "More than 10 years"
 		},
-		"years_teaching": {
-			"0": "Between 1 and 3 years",
-			"1": "Between 4 and 6 years",
-			"2": "Between 7 and 9 years",
-			"3": "More than 10 years"
+		"TechApplicationOptns": {
+			"preparation_of_materials": "Preparation of materials",
+			"asynchronous_learning": "Asynchronous learning",
+			"sending_emails": "Sending emails",
+			"develop_online_tasks_evaluations": "Develop online tasks/evaluations",
+			"bureaucratic_and_planning_tasks": "Bureaucratic and planning tasks",
+			"conducting_research": "Conducting research",
+			"study_group": "Study group",
+			"use_of_tools": "Use of tools",
+			"no": "I don’t use it"
 		},
-		"years_of_uses_technology_for_teaching": {
-			"0": "I don’t use it",
-			"1": "Between 1 and 3 years",
-			"2": "Between 4 and 6 years",
-			"3": "Between 7 and 9 years",
-			"4": "More than 10 years"
+		"errors": {
+			"found": "Some errors were found",
+			"born": "It seems you have not set your date of birth.",
+			"personalDataRequired": "All fields in Personal Data are required.",
+			"workDataRequired": "All fields in Work Data are required.",
+			"profileDataRequired": "All fields in Profile Data are required.",
+			"email": "The email is not valid.",
+			"emailConfirm": "The emails do not match.",
+			"password": "The password must be at least 6 characters long.",
+			"passwordConfirm": "The passwords do not match.",
+			"tos": "You must accept the Terms and conditions, and the Privacy Notice of the Edutec Guide."
 		},
-		"technology_application": {
-			"0": "Preparing material",
-			"1": "Asynchronous learning",
-			"2": "Sending e-mails",
-			"3": "Developing online tasks/evaluations",
-			"4": "Handling paperwork and planning",
-			"5": "Research",
-			"6": "Study Groups",
-			"7": "Using tools"
-		}
+		"success": "User successfully created"
 	},
 	"SignUpFormAdminStates": {
 		"affiliationBox": {

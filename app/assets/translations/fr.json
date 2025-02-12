@@ -2202,127 +2202,155 @@
 		"descriptionAdminState": "Le Guide EduTec a été conçu pour fournir aux gestionnaires de réseau des données importantes sur l'utilisation de la technologie dans l'éducation."
 	},
 	"SignUpForm": {
-		"personalData": "Données Personnelles",
-		"professionalsData": "Données Professionnelles",
+		"personalData": "Données personnelles",
+		"professionalsData": "Données professionnelles",
 		"formation": "Formation",
 		"label": {
-			"name": "Nom",
+			"name": "Nom complet",
 			"cpf": "Document d'identité national",
 			"birthDate": "Date de naissance",
-			"email": "E-mail",
-			"emailConfirmation": "Confirmez votre e-mail",
+			"email": "Email",
+			"emailConfirmation": "Confirmez votre email",
 			"password": "Mot de passe",
 			"confirmPassword": "Confirmez le mot de passe",
 			"region": "Pays",
-			"province": "Nível geográfico 2",
-			"state": "Nível geográfico 3",
-			"teachingStages": "Étapes de l’Enseignement",
-			"knowledges": "Domaine de Connaissance / Matière",
-			"formation": "Au long de votre trajectoire professionnelle, vous avez suivi ou êtes en train de suivre une formation dans le domaine de l’innovation et de la technologie ?",
-			"formationLevel": "Quel est votre niveau d'études ?",
-			"gender": "Quel est ton genre ?",
-			"initial_formation": "Quelle est votre formation initiale ?",
-			"final_year_of_initial_formation": "Quelle est l'année de conclusion de votre formation initiale ?",
-			"internship_practice": "Dans votre formation initiale, avez-vous eu une expérience de stage ?",
-			"institution_initial_formation": "Dans quel établissement d'enseignement avez-vous étudié (formation initiale) ?",
-			"technology_in_teaching_and_learning": "Aviez-vous eu une discipline ou un contenu pour l'utilisation de la technologie dans l'enseignement et l'apprentissage dans le cours de formation initiale ?",
-			"course_modality": "Quelle est le type de votre formation initiale ?",
-			"cont_educ_in_the_use_of_digital_technologies": "Avez-vous participé à une formation continue pour l'utilisation des technologies numériques dans les processus d'enseignement et d'apprentissage au cours des 2 dernières années ?",
+			"province": "Niveau géographique 2",
+			"state": "Niveau géographique 3",
+			"city": "Niveau géographique 4",
+			"school": "Centre éducatif",
+			"teachingStages": "Niveaux d'enseignement",
+			"knowledges": "Domaine de connaissances / Composant curriculaire",
+			"formation": "Au cours de votre carrière, avez-vous suivi ou suivez-vous actuellement une formation en innovation et technologie ?",
+			"formationLevel": "Quel est votre plus haut niveau d'éducation ?",
+			"gender": "Avec quel genre vous identifiez-vous ?",
+			"formation_level": "Quel est votre plus haut niveau d'éducation atteint ?",
+			"year_finished_formation": "Quelle est l'année de fin de votre formation initiale d'enseignant ?",
+			"initial_formation": "Votre formation initiale d'enseignant était en :",
+			"final_year_of_initial_formation": "Quelle est l'année de fin de votre formation initiale d'enseignant ?",
+			"internship_practice": "Dans votre formation initiale d'enseignant, avez-vous eu une pratique de stage ?",
+			"institution_initial_formation": "Quelle est l'institution éducative où vous avez étudié (formation initiale d'enseignant) ?",
+			"tech_in_teaching": "Avez-vous eu une discipline ou un contenu pour l'utilisation de la technologie dans l'enseignement et l'apprentissage dans votre formation initiale d'enseignant ?",
+			"course_modality": "Quelle était la modalité de votre formation initiale d'enseignant ?",
+			"formation_in_tech": "Avez-vous participé à une formation continue pour l'utilisation des technologies numériques dans les processus d'enseignement et d'apprentissage au cours des 2 dernières années ?",
 			"years_teaching": "Depuis combien d'années enseignez-vous ?",
-			"years_of_uses_technology_for_teaching": "Depuis combien d'années utilisez-vous la technologie dans les processus d'enseignement et d'apprentissage ?",
-			"technology_application": "Comment la technologie est-elle appliquée aux processus d'enseignement et d'apprentissage ?"
+			"years_using_tech": "Depuis combien d'années utilisez-vous la technologie dans les processus d'enseignement et d'apprentissage ?",
+			"tech_application": "Comment la technologie est-elle appliquée dans les processus d'enseignement et d'apprentissage ?"
 		},
-		"description": {
-			"cpf": "Saisissez uniquement les chiffres",
-			"birthDate": "Format correct DD/MM/AAAA",
-			"email": "Saisissez un e-mail valide"
+		"help": {
+			"pleaseSelect": "Veuillez sélectionner",
+			"password": "Le mot de passe doit comporter au moins 6 caractères",
+			"confirmPassword": "Répétez le mot de passe",
+			"cpf": "Entrez uniquement les chiffres",
+			"email": "Entrez une adresse email valide",
+			"year_finished_formation": "Veuillez entrer uniquement l'année.",
+			"format": "Format"
 		},
-		"selectRegion": "Choisir une option",
-		"selectState": "Choisir une option",
 		"loading": "Chargement...",
 		"noOptions": "Aucune option.",
 		"placeholderSelectOptions": "Sélectionnez une ou plusieurs options",
 		"formationTitle": "Formation",
 		"yes": "Oui",
 		"no": "Non",
-		"acceptTermsOfUse": "J'ai lu et accepté les {termsOfUseLink} du guide Edutec.",
-		"termsOfUse": "termes et conditions",
-		"privacyNotice": "L'avis de confidentialité",
-		"termsOfUseAndDataSharing": "Conditions d'utilisation et partage de données",
-		"btnSave": "Sauver",
-		"shareData": "Partage des données avec le réseau d’enseignement",
-		"radioAcceptshareData": "J'accepte de partager mes données ouvertement avec le Secrétariat d'État à l'Éducation",
-		"radioNoAcceptshareData": "Je préfère partager mes données anonymement avec le Secrétariat d'État à l'Éducation",
-		"radioNoAcceptshareDataDescription": "Si un secrétariat a accès aux données nominales des enseignants, il est possible d'identifier les demandes et les intérêts de chacun et, avec cela, de concevoir une formation ciblée et pertinente. Êtes-vous sûr de vouloir partager de manière anonyme?",
-		"notificationNoSharingAnswers": "Si le secrétariat a accès aux données nominatives des enseignants, il est possible d'identifier les demandes et les intérêts de chacun et, avec cela, de concevoir des formations ciblées et significatives. Êtes-vous sûr de vouloir partager de manière anonyme?",
-		"register": "M’INSCRIRE",
-		"termsOfUseModalTitle": "Conditions d'utilisation - EduTec Guide Auto-évaluation numérique des enseignants",
-		"titleVerificationModal": "VÉRIFICATION DES DONNÉES D'ENREGISTREMENT",
-		"questionVerificationModal": "Êtes-vous enseignant dans cette école?",
-		"placeholderStages": "Choisir une option",
+		"acceptTermsOfUse": "J'ai lu et j'accepte les {termsOfUseLink} du Guide Edutec.",
+		"termsOfUse": "Conditions générales et l'Avis de confidentialité",
+		"privacyNotice": "Avis de confidentialité",
+		"termsOfUseAndDataSharing": "Conditions d'utilisation et partage des données",
+		"btnSave": "Sauvegarder",
+		"title_login_data": "Données d'accès",
+		"share_personal_data": "J'accepte de partager mes données personnelles avec le Département de l'Éducation",
+		"share_personal_data_disclaimer": "Le prénom, le nom et la date de naissance ne seront pas partagés",
+		"radioAcceptshareData": "J'accepte de partager mes données, y compris mon nom, avec le Département de l'Éducation",
+		"radioNoAcceptshareData": "Je préfère partager mes données de manière anonyme avec le Département de l'Éducation",
+		"radioNoAcceptshareDataDescription": "Si le secrétariat a accès aux données nominatives des enseignants, il est possible d'identifier les demandes et les intérêts de chacun et, ainsi, de concevoir des formations ciblées et significatives. Êtes-vous sûr de préférer partager de manière anonyme ?",
+		"notificationNoSharingAnswers": "Si le secrétariat a accès aux données nominatives des enseignants, il est possible d'identifier les demandes et les intérêts de chacun et, ainsi, de concevoir des formations ciblées et significatives. Êtes-vous sûr de préférer partager de manière anonyme ?",
+		"register": "S'INSCRIRE",
+		"termsOfUseModalTitle": "Conditions d'utilisation - Diagnostic de compétence numérique pour les enseignants du Guide Edutec",
+		"titleVerificationModal": "VÉRIFICATION DES DONNÉES D'INSCRIPTION",
+		"questionVerificationModal": "Êtes-vous enseignant dans cette école ?",
+		"placeholderStages": "Sélectionnez une option",
 		"placeholderKnowledges": "Sélectionnez votre spécialité",
-		"selectProvince": "Choisir une option",
+		"selectProvince": "Sélectionnez une option",
 		"btnWithLink": "Utilisateur avec lien",
 		"btnWithoutLink": "Utilisateur sans lien",
-		"deleteAccount": "SOUHAITE SUPPRIMER MON COMPTE",
+		"deleteAccount": "JE SOUHAITE SUPPRIMER MON COMPTE",
 		"noLink": "Je ne souhaite pas identifier mes données professionnelles",
 		"withLink": "Je souhaite identifier mes données professionnelles\n",
-		"gender": {
-			"masculine": "Masculin",
-			"feminine": "Féminin",
-			"others": "Autre",
-			"preferNotToSay": "Je préfère ne pas le dire"
+		"GenderOptns": {
+			"male": "Homme",
+			"female": "Femme",
+			"other": "Autre",
+			"didnt_say": "Préférez ne pas dire"
 		},
-		"initial_formation": {
-			"options": ""
+		"FormationLevelsOptns": {
+			"graduate": "Lycée",
+			"bachelor_degree": "Licence",
+			"teacher_graduate": "Diplôme d'enseignant",
+			"postgraduate": "Cours de troisième cycle",
+			"masters": "Master",
+			"phd": "Doctorat"
 		},
-		"internship_practice": {
-			"0": "Je n'avais aucun stage",
-			"1": "Oui, mais juste pour l'observation",
-			"2": "Oui, mais l'utilisation des technologies et des matériaux numériques dans les processus d'enseignement et d'apprentissage n'a pas été explorée",
-			"3": "Oui, et l'utilisation des technologies et des matériaux numériques dans les processus d'enseignement et d'apprentissage a été explorée"
+		"InitialFormationOptns": {
+			"early_childhood_teacher": "Enseignant de la petite enfance",
+			"primary_education_teacher": "Enseignant de l'éducation primaire",
+			"secondary_education_teacher": "Enseignant de l'éducation secondaire",
+			"technical_teacher": "Enseignant technique",
+			"other": "Autre"
 		},
-		"technology_in_teaching_and_learning": {
-			"yes": "Oui",
+		"InternshipPracticeOptns": {
+			"no": "Je n'ai pas eu de pratique de stage",
+			"yes_observational": "Oui, uniquement observationnelle",
+			"yes_non_explorative": "Oui, mais l'utilisation des technologies et des matériaux numériques dans les processus d'enseignement et d'apprentissage n'a pas été explorée",
+			"yes_explorative": "Oui, et l'utilisation des technologies et des matériaux numériques dans les processus d'enseignement et d'apprentissage a été largement explorée"
+		},
+		"CourseModalityOptns": {
+			"on_site": "Sur site",
+			"online": "En ligne",
+			"mixed": "Les deux",
+			"none": "Aucun"
+		},
+		"FormationInTechOptns": {
+			"on_site": "Oui, sur site",
+			"online": "Oui, en ligne",
+			"mixed": "Oui, les deux",
 			"no": "Non"
 		},
-		"course_modality": {
-			"inPerson": "Face à face",
-			"blended": "Mixte",
-			"fromADistance": "À distance"
+		"YearsTeachingOptns": {
+			"between_1_and_3": "Entre 1 et 3 ans",
+			"between_4_and_6": "Entre 4 et 6 ans",
+			"between_7_and_9": "Entre 7 et 9 ans",
+			"more_than_10_years": "Plus de 10 ans"
 		},
-		"cont_educ_in_the_use_of_digital_technologies": {
-			"0": "C'est un nouveau sujet auquel je n'ai pas encore pensé.",
-			"1": "Pas encore, mais je suis intéressé",
-			"2": "J'ai déjà participé à une ou deux formations continues sur le sujet",
-			"3": "J'ai déjà participé à plusieurs formations continues sur le sujet, y compris en ligne",
-			"4": "Fréquemment je participe de formations continuées sur le sujet, y compris en ligne",
-			"5": "Oui, je participe à des formations continues sur le sujet et j'ai une spécialisation (lato sensu) dans ce domaine",
-			"6": "Oui, je participe à des formations continues sur le sujet et j'ai une spécialisation (stricto sensu) dans ce domaine"
+		"YearsUsingTechOptns": {
+			"no": "Je n'utilise pas",
+			"between_1_and_3": "Entre 1 et 3 ans",
+			"between_4_and_6": "Entre 4 et 6 ans",
+			"between_7_and_9": "Entre 7 et 9 ans",
+			"more_than_10_years": "Plus de 10 ans"
 		},
-		"years_teaching": {
-			"0": "Entre 1 et 3 ans",
-			"1": "Entre 4 et 6 ans",
-			"2": "Entre 7 et 9 ans",
-			"3": "Plus de 10 ans"
+		"TechApplicationOptns": {
+			"preparation_of_materials": "Préparation de matériaux",
+			"asynchronous_learning": "Apprentissage asynchrone",
+			"sending_emails": "Envoi d'emails",
+			"develop_online_tasks_evaluations": "Développer des tâches/évaluations en ligne",
+			"bureaucratic_and_planning_tasks": "Tâches bureaucratiques et de planification",
+			"conducting_research": "Mener des recherches",
+			"study_group": "Groupe d'étude",
+			"use_of_tools": "Utilisation d'outils",
+			"no": "Je ne l'utilise pas"
 		},
-		"years_of_uses_technology_for_teaching": {
-			"0": "Je n'utilise pas",
-			"1": "Entre 1 et 3 ans",
-			"2": "Entre 4 et 6 ans",
-			"3": "Entre 7 et 9 ans",
-			"4": "Mais de 10 anos"
+		"errors": {
+			"found": "Des erreurs ont été trouvées",
+			"born": "Il semble que vous n'avez pas défini votre date de naissance.",
+			"personalDataRequired": "Tous les champs des Données personnelles sont obligatoires.",
+			"workDataRequired": "Tous les champs des Données professionnelles sont obligatoires.",
+			"profileDataRequired": "Tous les champs des Données de profil sont obligatoires.",
+			"email": "L'email n'est pas valide.",
+			"emailConfirm": "Les emails ne correspondent pas.",
+			"password": "Le mot de passe doit comporter au moins 6 caractères.",
+			"passwordConfirm": "Les mots de passe ne correspondent pas.",
+			"tos": "Vous devez accepter les Conditions générales et l'Avis de confidentialité du Guide Edutec."
 		},
-		"technology_application": {
-			"0": "Dans la préparation des matériaux",
-			"1": "Apprentissage asynchrone",
-			"2": "Emailing",
-			"3": "Développer des devoirs/évaluations en ligne",
-			"4": "Tâches bureaucratiques et de planification",
-			"5": "Conduire une recherche",
-			"6": "Groupe d'étude",
-			"7": "Utilisation de l’outillage"
-		}
+		"success": "Utilisateur créé avec succès"
 	},
 	"SignUpFormAdminStates": {
 		"affiliationBox": {

@@ -2085,123 +2085,151 @@
 		"professionalsData": "Dados Profissionais",
 		"formation": "Formação",
 		"label": {
-			"name": "Nome",
-			"cpf": "Documento nacional de identidade",
-			"birthDate": "Data de nascimento",
-			"email": "E-mail",
-			"emailConfirmation": "Confirme seu e-mail",
+			"name": "Nome Completo",
+			"cpf": "Documento de Identidade Nacional",
+			"birthDate": "Data de Nascimento",
+			"email": "Email",
+			"emailConfirmation": "Confirme seu Email",
 			"password": "Senha",
-			"confirmPassword": "Confirmar senha",
+			"confirmPassword": "Confirme a Senha",
 			"region": "País",
-			"province": "Nível geográfico 2",
-			"state": "Nível geográfico 3",
-			"teachingStages": "Etapas do Ensino",
-			"knowledges": "Área do Conhecimento / Componente Curricular",
-			"formation": "Durante o seu percurso profissional, você fez ou está fazendo alguma formação na área de inovação e tecnologia?",
-			"formationLevel": "Qual o seu nível de formação?",
-			"gender": "Qual o seu gênero?",
-			"initial_formation": "Qual o seu curso de formação inicial?",
-			"final_year_of_initial_formation": "Qual o ano de conclusão da sua formação inicial?",
-			"internship_practice": "Na formação inicial, teve prática de estágio?",
-			"institution_initial_formation": "Qual a instituição de ensino que você estudou (formação inicial)?",
-			"technology_in_teaching_and_learning": "Você teve alguma disciplina ou conteúdo para uso de tecnologia no ensino e na aprendizagem no curso de formação inicial?",
-			"course_modality": "Qual a modalidade do seu curso de formação inicial?",
-			"cont_educ_in_the_use_of_digital_technologies": "Participou de formações continuadas para o uso de tecnologias digitais nos processos de ensino e de aprendizagem nos últimos 2 anos?",
+			"province": "Nível Geográfico 2",
+			"state": "Nível Geográfico 3",
+			"city": "Nível Geográfico 4",
+			"school": "Centro Educacional",
+			"teachingStages": "Etapas de Ensino",
+			"knowledges": "Área de Conhecimento / Componente Curricular",
+			"formation": "Ao longo de sua carreira, você concluiu ou está atualmente cursando alguma formação em inovação e tecnologia?",
+			"formationLevel": "Qual é o seu nível mais alto de educação?",
+			"gender": "Com qual gênero você se identifica?",
+			"formation_level": "Qual é o seu nível mais alto de educação alcançado?",
+			"year_finished_formation": "Qual foi o ano de conclusão da sua formação inicial de professor?",
+			"initial_formation": "Sua formação inicial de professor foi em:",
+			"final_year_of_initial_formation": "Qual foi o ano de conclusão da sua formação inicial de professor?",
+			"internship_practice": "Na sua formação inicial de professor, você teve prática de estágio?",
+			"institution_initial_formation": "Qual é a instituição de ensino onde você estudou (formação inicial de professor)?",
+			"tech_in_teaching": "Você teve alguma disciplina ou conteúdo para o uso de tecnologia no ensino e aprendizagem na sua formação inicial de professor?",
+			"course_modality": "Qual foi a modalidade da sua formação inicial de professor?",
+			"formation_in_tech": "Você participou de formação continuada para o uso de tecnologias digitais nos processos de ensino e aprendizagem nos últimos 2 anos?",
 			"years_teaching": "Há quantos anos você leciona?",
-			"years_of_uses_technology_for_teaching": "Há quantos anos usa tecnologia nos processos de ensino e aprendizagem?",
-			"technology_application": "Como a tecnologia é aplicada nos processos de ensino e de aprendizagem?"
+			"years_using_tech": "Há quantos anos você usa tecnologia nos processos de ensino e aprendizagem?",
+			"tech_application": "Como a tecnologia é aplicada nos processos de ensino e aprendizagem?"
 		},
-		"description": {
-			"cpf": "Insira somente os números",
-			"birthDate": "Formato correto DD/MM/AAAA",
-			"email": "Insira um e-mail válido"
+		"help": {
+			"pleaseSelect": "Por favor selecione",
+			"password": "A senha deve ter pelo menos 6 caracteres",
+			"confirmPassword": "Repita a senha novamente",
+			"cpf": "Digite apenas os números",
+			"email": "Digite um endereço de email válido",
+			"year_finished_formation": "Por favor, insira apenas o ano.",
+			"format": "Formato"
 		},
-		"selectRegion": "Selecione uma opção",
-		"selectState": "Selecione uma opção",
 		"loading": "Carregando...",
 		"noOptions": "Sem opções.",
 		"placeholderSelectOptions": "Selecione uma ou mais opções",
 		"formationTitle": "Formação",
 		"yes": "Sim",
 		"no": "Não",
-		"acceptTermsOfUse": "Li e aceito os {termsOfUseLink} do Guia Edutec.",
-		"termsOfUse": "Termos e Condições",
+		"acceptTermsOfUse": "Eu li e aceito os {termsOfUseLink} do Guia Edutec.",
+		"termsOfUse": "Termos e condições, e o Aviso de Privacidade",
 		"privacyNotice": "Aviso de Privacidade",
-		"termsOfUseAndDataSharing": "Termos de Uso e Compartilhamento dos Dados",
+		"termsOfUseAndDataSharing": "Termos de Uso e Compartilhamento de Dados",
 		"btnSave": "Salvar",
-		"shareData": "Compartilhamento dos dados com a rede de ensino",
-		"radioAcceptshareData": "Concordo em compartilhar meus dados, nominalmente, com a secretaria de educação",
-		"radioNoAcceptshareData": "Prefiro compartilhar meus dados de forma anônima com a secretaria de educação",
-		"radioNoAcceptshareDataDescription": "Se a secretaria tiver acesso aos dados nominais dos (as) professores (as), é possível identificar as demandas e interesses de cada um e, com isso, desenhar formações direcionadas e significativas. Tem certeza que prefere compartilhar anonimamente?",
-		"notificationNoSharingAnswers": "Se a secretaria tiver acesso aos dados nominais dos(as) professores(as), é possível identificar as demandas e interesses de cada um e, com isso, desenhar formações direcionadas e significativas. Tem certeza que prefere compartilhar anonimamente?",
+		"title_login_data": "Dados de acesso",
+		"share_personal_data": "Eu concordo em compartilhar meus dados pessoais com o Departamento de Educação",
+		"share_personal_data_disclaimer": "Nome e sobrenome e data de nascimento não serão compartilhados",
+		"radioAcceptshareData": "Eu concordo em compartilhar meus dados, incluindo meu nome, com o Departamento de Educação",
+		"radioNoAcceptshareData": "Eu prefiro compartilhar meus dados anonimamente com o Departamento de Educação",
+		"radioNoAcceptshareDataDescription": "Se a secretaria tiver acesso aos dados nominais dos professores, é possível identificar as demandas e interesses de cada um e, com isso, planejar formações direcionadas e significativas. Tem certeza de que prefere compartilhar anonimamente?",
+		"notificationNoSharingAnswers": "Se a secretaria tiver acesso aos dados nominais dos professores, é possível identificar as demandas e interesses de cada um e, com isso, planejar formações direcionadas e significativas. Tem certeza de que prefere compartilhar anonimamente?",
 		"register": "CADASTRAR",
-		"termsOfUseModalTitle": "Termos de Uso - Guia EduTec Autoavaliação de Competências Digitais de Professores",
-		"titleVerificationModal": "VERIFICAÇÃO DE DADOS DE REGISTRO",
+		"termsOfUseModalTitle": "Termos de uso - Diagnóstico de Competência Digital do Guia Edutec para Professores",
+		"titleVerificationModal": "VERIFICAÇÃO DOS DADOS DE CADASTRO",
 		"questionVerificationModal": "Você é professor nesta escola?",
 		"placeholderStages": "Selecione uma opção",
 		"placeholderKnowledges": "Selecione sua especialidade",
 		"selectProvince": "Selecione uma opção",
-		"btnWithoutLink": "Usuário Sem Vínculo",
 		"btnWithLink": "Usuário Com Vínculo",
+		"btnWithoutLink": "Usuário Sem Vínculo",
 		"deleteAccount": "DESEJO EXCLUIR MINHA CONTA",
-		"noLink": "Não gostaria de identificar meus dados profissionais",
-		"withLink": "Gostaria de identificar meus dados profissionais",
-		"gender": {
-			"masculine": "Masculino",
-			"feminine": "Feminino",
-			"others": "Outros",
-			"preferNotToSay": "Prefiro não dizer"
+		"noLink": "Eu não gostaria de identificar meus dados profissionais",
+		"withLink": "Eu gostaria de identificar meus dados profissionais\n",
+		"GenderOptns": {
+			"male": "Masculino",
+			"female": "Feminino",
+			"other": "Outro",
+			"didnt_say": "Prefiro não dizer"
 		},
-		"initial_formation": {
-			"options": "Educação, Ciências Físicas Biológicas, Geografia, Pedagogia, Engenharia de Automação, Engenharia Ambiental, Ciência da Computação, Engenharia de Produção, Logística, Artes Cênicas, Quiropraxia, Produção Musical, Processos Escolares, Engenharia de Bioprocessos, Gestão da Inovação e Empreendedorismo Digital, Big Data no Agronegócio, Engenharia de Instrumentação, Automação e Robótica, Visagismo e Terapias Capilares, Comunicação Institucional, Comunicação Assistiva, Terapia Ocupacional, Engenharia Biomédica, Fruticultura, Políticas e Estratégicas Públicas, Construção Civil, Gestão de Representação Comercial, Defesa Médica Hospitalar, Massoterapia, Design de Games, Produção Cultural, Relações Públicas, Gestão de Serviços de Saúde, Agroecologia, Automação Industrial, Design Gráfico, Multidisciplinar em Dependência Química, Processos Ambientais, Gestão de Cidades Inteligentes, Redes de Computadores, Engenharia Hídrica, Engenharia Mecatrônica, Digital Security, Engenharia Biotecnológica, Toxicologia Ambiental, Gestão de Micro e Pequenas Empresas, Design Comercial, Oftálmica, Engenharia de Manufatura, Comércio Exterior, Engenharia de Agronegócios, Cinema e Audiovisual, Mecatrônica Automotiva, Engenharia de Sistemas, Engenharia Bioquímica, Análise e Desenvolvimento de Sistemas, Luteria, Inteligência Artificial, Hotelaria, Design de Experiência e de Serviços, Segurança no Trabalho, Artes, Geoprocessamento, Estética e Cosmética, Gestão de Seguros, Transporte Terrestre, Informática, Engenharia Automotiva, Digital Influencer, Engenharia de Biossistemas, Engenharia Aeronáutica, Produção Leiteira, Arqueologia, Matemática, Gestão das Organizações do Terceiro Setor, Cozinha Contemporânea, Manutenção Industrial, Análise de Sistemas, Gestão em Serviços, Agronomia, Comunicação Digital, Escrita Criativa, Gestão de Serviços Judiciários e Notariais, Comunicação e Marketing, Secretariado, Agronegócio, Ciências Agrícolas, Letras, Gestão Empresarial, Processos Químicos, Tecnologia da Informação, Informática para Negócios, Gestão da Segurança Pública e Patrimonial, Game Design, Design de Interiores, Streaming Profissional, Gestão de Pessoas, Arquivologia, Engenharia Agronômica, Óptica e Optometria, Engenharia de Pesca, Horticultura, Produção Cervejeira, Composição e Regência, Engenharia Geológica, Engenharia de Gestão, Educação Física, Blockchain e Criptografia Digital, Radiologia, Gestão de Energia e Eficiência Energética, Silvicultura, Saúde Coletiva, Ciências Contábeis, Biocombustíveis, Engenharia de Informação, Agroindústria, Desenvolvimento para Web, Automação de Escritórios e Secretariado, Sistemas para Internet, Nutrição, Controle Ambiental , Mecânica Industrial, Sistema de Informação, Instrumentação Cirúrgica, Biotecnologia, Microeletrônica, Artes Plásticas, Bioinformática, História, Gestão Hospitalar, Trânsito, Fisioterapia, Manufatura Avançada, Mineração, Produção de Fármacos, Rochas Ornamentais, Construção Naval, Computação, Engenharia Agrícola, Produção de Plástico, Administração, Segunda licenciatura, Educação e Processos de Trabalho: Alimentação Escolar, Produção Sucroalcooleira, Irrigação e Drenagem, Bioenergia, Saneamento Ambiental, Gerontologia, Finanças, Blockchain e Criptomoedas, Agrocomputação, Produção Agrícola, Gestão de Agronegócios, Produção Pesqueira, Fabricação Mecânica, Empreendedorismo, Gestão de Equinocultura, Produção Gráfica, Laticínios, Atividades de Inteligência e Gestão de Sigilos, Embelezamento e Imagem Pessoal, Educação Especial, Engenharia de Materiais, Desenvolvimento Mobile, Design de Produto, Zootecnia, Produção Agropecuária, Pilotagem Profissional de Aeronaves, Gestão de Investimentos, Telemática, Refrigeração e Climatização, Processos Metalúrgicos, Cafeicultura, Tutoria de Educação a Distância, Música, Teologia, Desenvolvimento de Produtos Plásticos, Petróleo e Gás, Soldagem, Arquitetura e Urbanismo, Engenharia de Recursos Hídricos, Engenharia Industrial, Comunicação em Mídias Digitais, Data Science, Negócios Imobiliários, Tecnologia Mecânica, Física, Educador Social, Desenvolvimento de Aplicativos para Dispositivos Móveis, Gestão da Produção Industrial, Ciência de Dados, Engenharia Aeroespacial, Gestão da Tecnologia da Informação, Desenvolvimento para Internet, Varejo Digital, Produção Multimídia, Mecânica, Enfermagem, Projeto de Estruturas Aeronáuticas, Gestão de Segurança Privada, Direção, Fonoaudiologia, Service Design, Cenografia, Engenharia Mecânica, Gestão de Trânsito, Cibersegurança, Arquitetura de Dados, Coding, Design, Engenharia em Sistemas Digitais, Segurança Alimentar, Gestão de Cloud Computing, Engenharia da Computação, Estatística, Instalações Elétricas, Desenvolvimento de Sistemas, Desenvolvimento e Gestão de Startups, Eletrônica Automotiva, Farmácia, Desenho de Animação, Marketing, Política e Gestão Cultural, Gestão de Políticas Públicas, Produção de Cachaça, Tecnologias Digitais, Gestão de Negócios, Negócios Digitais, Processos Gerenciais, Apicultura e Meliponicultura, Engenharia Química, Design Editorial, Planejamento Logístico de Cargas, Engenharia de Software, Gestão de Inventário Extrajudicial, Filosofia, Engenharia Têxtil, Moda, Assessoria Executiva Digital, Futebol, Gestão de Cooperativas, Podologia, Agrimensura, Produção de Cacau e Chocolate, Projetos Mecânicos, Eletrotécnica Industrial, Papel e Celulose, Controle de Obras, Produção Fonográfica, Medicina Veterinária, Gestão de Lojas e Pontos de Vendas, Artes do Espetáculo, Mecânica de Precisão, Gestão de Telecomunicações, Tecnologia em Controle Ambiental, Engenharia Acústica, Engenharia de Saúde e Segurança, Gastronomia, Gestão Ambiental, Jornalismo, Tradutor e Intérprete, Bioquímica, Gestão de Turismo, Investigação e Perícia Criminal, Canto, Sistemas de Informação, Produção de Grãos, Tecnologia Eletrônica, Big Data e Inteligência Analítica, Mecânica Automobilística, Processamento de Dados, Práticas Integrativas e Complementares, Engenharia de Telecomunicações, Gestão de Saúde Pública, Biologia, Artes e Mídias Digitais, Design de Aplicações e Interfaces Digitais, Direito, Alimentos, Mediação, Internet das Coisas, Engenharia de Biotecnologia, Educação do Campo, Construção de Edifícios, Serviço Social, Engenharia Cartográfica, Jogos Digitais, Cosmetologia e Estética, Engenharia de Energia, Astronomia, Gestão do Agronegócio, Conservação e Restauro, Ministério Pastoral, Engenharia de Minas, Engenharia Naval, Sistemas Automotivos, Turismo, Gestão Portuária, Polímeros, Filmmaker, Engenharia de Agrimensura, Banco de Dados, Design de Animação, Análise de Dados, Artes Visuais, Engenharia de Alimentos, Gestão da Informação, Teatro, E-Commerce, Odontologia, Design de Moda, Engenharia Eletrônica, Computação em Nuvem, Viticultura e Enologia, Tecnologias Educacionais, Engenharia de Petróleo, Acupuntura, Gestão de Resíduos de Serviços de Saúde, Gestão Pública, Engenharia de Aquicultura, Automação e Manufatura Digital, Ciências da Natureza, Eventos, Gestão das Relações Eletrônicas, Eletrônica Industrial, Psicologia, Coaching e Mentoring, Gestão Tributária, Paramedicina, Biblioteconomia, Defesa Cibernética, Engenharia Elétrica, Qualidade de Vida na Contemporaneidade, Estradas, Gestão da Qualidade, Gestão de Produção Industrial, Administração Pública, Desenvolvimento Back-End, Produção Audiovisual, Produção Industrial, Programa Especial de Formação Pedagógica, Gestão de Recursos Hídricos, Manutenção de Aeronaves, Relações Internacionais, Energias Renováveis, Desenho e Plástica, Auditoria em Saúde, Interiores e Decorações, Aquicultura, Biomedicina, Design de Ambientes, Engenharia Florestal, Gestão de Recursos Humanos, Engenharia Física, Engenharia da Mobilidade, Devops, Antropologia, Produção Têxtil, Paisagismo, Estilismo, Engenharia Agroindustrial, Coach Digital, Engenharia Civil, Rádio, TV e Internet, Mídias Sociais, Letras, habilitação em portugues e inglês e respectivas literaturas, Gestão educacional, Licenciatura plena em matemática, Ciências sociais, Pedagogico, Licenciatura em normal superior, Engenharia de computação, Ciências da religião, Licenciatura plena em ciências biologicas, Licenciatura em quimica, Licenciatura em musica, Licenciatura em matemática, Letras - licenciatura em língua espanhola, Letras - língua portuguesa e literatura, Ciências biologicas, Pegagogia, Quimica, Letras vernáculo, Licenciatura em computação, Licenciatura em ciências biológicas, Licenciatura plena em fisica, Licenciatura plena em educação física, Licenciatura em letras e espanhol, Arte, Ciências biológicas, Ciências econômicas, Licenciatura - letras português e inglês, Bacharel em teologia, Licenciatura em geografia, Univesidade do estado de mato grosso, Licenciatura plena em pedagogia., Ciências naturais e matemática, Sim, Licenciatura e bacharelado em ciências biológicas, Historia, Educaçao infantil eseries iniciais, Unidocencia, Licenciatura em história, Licenciatura plena em linguas, artes e literaturas, Licenciatura e bacharelado em ciências sociais, Licenciatura em sociologia, Licenciatura em física, Licenciatura plena em letras e literatura, Licenciatura plena em física, Letras - língua e literaturas de língua inglesa, Pedagoga, Psicopedagoga, Administração ambiental, Letras português/ francês, Licenciatura plena em geografia, Licenciatura plena em ciencias biologicas, Faculdade unitins, Sociologia, Licenciatura em educação física, Educação artística - habilitação em música, Normal superior, Licenciatura em letras/espanhol, Licenciatura em história, Licenciatura em matematica com habilitação em ciencias naturais, Bacharel em geografia, Magistério, Educação física escolar, Licenciatura em química, Estudos sociais, Licenciatura em pedagogia, Educação física, Matematica, Licenciatura letras português/espanhol, Psicologia educacional, Licenciatura em letras, Lincenciatura em pedagogia, Didática do magistério do ,3° grau, Licenciatura plena pedagogia, Psicopedagogia, Licenciatura plena em ciências naturais -biologia, Licenciatura em informática, Linguística aplicada ao ensino de língua portuguesa, Bacharel e licenciatura, Licenciatura plena em letras - língua e literatura de língua portuguesa e língua inglesa, Licenciatura plena em letras/português, Polivalente, Licenciatura em ciencias sociais, Licenciatura em ciências sociais, Licenciatura - letras português/inglês, Licenciatura plena em pedagogia, Licenciatura em pedagogia para educação infantil, Letras / jornalismo, Ciências humanas, Licenciatura em letras - habilitação em português/inglês, Educação inclusiva, Pedagogos, Ciências habilitação química, Licenciatura plena em educação infantil, Educação artística, Licenciatura em música, Gestão escolar, Letras/inglês, Letrasportugues, Planejamento e gestao educacional, Finom, Letras - licenciatura em letras libras, Zootecnica, Curso de licenciatura em pedagogia, Pedagogo, Licenciatura em economia doméstica, Licenciatura plena em letras port, Licenciatura em artes cênicas, Licenciatura em biologia, Licenciatura em letras-português, Lingua portuguesa, Licenciatura em ciencias com habilitação em matemática, Licenciatura em educação do campo, Ensino médio, Licenciatura em ciências biológicas bacharelado em ecologia, Licenciatura em português, Letras inglês/português, Licenciatura plena em química, Ciências licenciatura com habilitação em física, Licençeciatura em geografia, Educacao fisica, Ciências e matemática, Comunicação social, Licenciatura pedagogia, Licenciatura em ciências naturais, Nao tenho, Formação geral, Letras licenciatura - portuguêsn/ espanhol e literaturas brasileira, portuguesa e espanhola, Curso normal- magistério, Licenciatura curta, Lienciatura plena em educação física, Licenciatura plena em ciências naturais e matemática com habilitação em física, Normal médio, Licenciatura em ciencias e matemática, Licenciatura e bacharelado em química, Licenciatura em ciencias naturais e matemática com habilitação em química, Contábeis, Letras língua portuguesa e literatura, Degagogia, Pedagogia em multimeios e informática educativa, Educação física/pedagogia, Licenciatura geografia, Licenciatura plena em história, Normal superior e pedagogia, Licenciatura computação, Ciências biol[ogicas, Pedadogia, Professor de educação física, Linciatura plena em educação fisica, Lincenciatura em pedagogia para a educação infantil, Licentura em estudos sociais, Licentura em estudos, Pós, Ciências físicas e biológica, Engenharia do petróleo, Licenciatuara em história, Licenciatura química, Licenciatura plena de artes, Engenheiro agronomo, Licenciatura plena em ciências físicas e biológicas, Especialização em metolologia do ensino de língua portuguesa e literatura, Ed física, Licenciatura em ciencias biologica, Ciência da matemática, Ciencias biologicasbio, Ciência biológicas, Licenciatura plena letras, Ciência biológica, Uninassau, Licenciatura em filosofia, Licenciatura plena em ciências biológicas, Licenciatura em ciências naturais e matemática com habilitação em matemática, Letras - português/ inglês, Licenciatura plena em educação artística, Competencias digitais, Licenciatura e bacharelado em história, Licenciatura plena em informática, Bacharel /licenciatura, Ciencias/ matematica, Bacharel em geografia e formação pedagógica em geografia, Cursando pedagogia no momento, Licenciatura plena em matematica, Licenciatura de matemática, Bacharelado em física, Licenciatura e bacharelado em educação física, Licenciatura plena em ciencias naturais e matemática, Educação artística, Letras - licenciatura plena em inglês e português e suas literaturas, Tecnico em enfermagem, Letras frances, Licenciatura em ciências da natureza, Licencida em pedagogia, Licenciatura plena em química, Licenciatura plena em história, Lingua portuguesa espanhol e arte, Propedêutico, Curso de magistério, Coordenação pedagógica, Magistério de 1º grau 1ª a 4ª série, Economia domestica, Licenciatura plena em ciências sociais, Bacharel em administracao hab. recursos humanos, Licenciatura plena em eduacacao artistica com habilitacao em artes plasticas, Licenciatura e bacharelado em geografia, Técnico em edificações, Letras inglês licenciatura, Bacharelado em educação física, Escola marcelino champagnat, Oceanografia, Licenciatura em historia, Licenciatura em ciências da natureza com habilitação em química, História e pedagogia, Licenciatura plena em computação, Padagogia, Mecatrônica industrial, Curso de complementação pedagógica em sociologia, Licenciatura em educação artística, Curso de complementação, Ciencias tecnologia e educação, Linceciatura plena, Licenciaturas em teatro, Licenciatura em ciências agrícolas, Bacharelado em geologia, Professor de matemática, Formação de professores, Tecnologo em recursos humanos, Engenharia industrial madereira, Licenciatura historia, Licenciatura plena em língua portuguesa e literatura de língua portuguesa, Licen, Licenciatura em química e, Curso normal, Tecnologia em gestão financeira, Química industrial, Licenciatura em artes, Analises clinica, Licenciatura em artes visuais, Licenciatura em ciências biológico, Educador, Letras português, Unopar, Contabilidade, Licenciatura plena em letras português e inglês, Ensino medio, Licenciatura quimica, Licenciatura plena em pedagogia, Licenciatura plena em normal superior, Licenciatura plena em norma superio, Licenciatura letras, Ciencias sociais, Gestão financeira, Universidade federal do espirito santo, Licenciatura em letras portugues e ingles, Tradutor interprete de libras, Tecnico de secretariado, Tecnico agricola, Bacharel em ciências econômicas, Geografia e educação ambiental, Engenharia metalúrgica, Engenharia agricola e ambiental, Tecnológico em logística, Geografia licenciatura plena, Matemática industrial, Letras portugues ingles, Ciências biológicas licenciatura, Tecnologia educacional, Só possuo em nivel medio, História da arte, Letras língua portuguesa e suas respectivas literaturas, Bacharel em ciências contábeis, Habilitação profissional em magistério, Licentuatura plena e portugues e inglês, Unip, Normal superior, Gemologia, Fafia, Lincenciatura em geografia, Bacharelado e licenciatura em ciências biológicas, Complentação pedagógica em matemática"
+		"FormationLevelsOptns": {
+			"graduate": "Ensino Médio",
+			"bachelor_degree": "Graduação",
+			"teacher_graduate": "Licenciatura",
+			"postgraduate": "Pós-graduação",
+			"masters": "Mestrado",
+			"phd": "Doutorado"
 		},
-		"internship_practice": {
-			"0": "Não teve prática de estágio",
-			"1": "Sim, mas apenas de observação",
-			"2": "Sim, mas não foi explorado o uso de tecnologias e materiais digitais nos processos de ensino e de aprendizagem",
-			"3": "Sim, e foi bastante explorado o uso de tecnologias e materiais digitais nos processos de ensino e de aprendizagem"
+		"InitialFormationOptns": {
+			"early_childhood_teacher": "Professor de Educação Infantil",
+			"primary_education_teacher": "Professor de Ensino Fundamental",
+			"secondary_education_teacher": "Professor de Ensino Médio",
+			"technical_teacher": "Professor Técnico",
+			"other": "Outro"
 		},
-		"technology_in_teaching_and_learning": {
-			"yes": "Sim",
+		"InternshipPracticeOptns": {
+			"no": "Não tive prática de estágio",
+			"yes_observational": "Sim, apenas observacional",
+			"yes_non_explorative": "Sim, mas o uso de tecnologias e materiais digitais nos processos de ensino e aprendizagem não foi explorado",
+			"yes_explorative": "Sim, e o uso de tecnologias e materiais digitais nos processos de ensino e aprendizagem foi amplamente explorado"
+		},
+		"CourseModalityOptns": {
+			"on_site": "Presencial",
+			"online": "Online",
+			"mixed": "Ambos",
+			"none": "Nenhum"
+		},
+		"FormationInTechOptns": {
+			"on_site": "Sim, presencial",
+			"online": "Sim, online",
+			"mixed": "Sim, ambos",
 			"no": "Não"
 		},
-		"course_modality": {
-			"inPerson": "Presencial",
-			"blended": "Semi-presencial",
-			"fromADistance": "À distância"
+		"YearsTeachingOptns": {
+			"between_1_and_3": "Entre 1 e 3 anos",
+			"between_4_and_6": "Entre 4 e 6 anos",
+			"between_7_and_9": "Entre 7 e 9 anos",
+			"more_than_10_years": "Mais de 10 anos"
 		},
-		"cont_educ_in_the_use_of_digital_technologies": {
-			"0": "Esta é um tema novo que ainda não considerei",
-			"1": "Ainda não, mas tenho interesse",
-			"2": "Já participei de uma ou duas formações continuadas sobre o tema",
-			"3": "Já participei de várias formações continuadas sobre o tema, inclusive online",
-			"4": "Frequentemente participo de formações continuadas sobre o tema, inclusive online",
-			"5": "Sim, participo de formações continuadas sobre o tema e tenho especialização (lato sensu) nessa área",
-			"6": "Sim, participo de formações continuadas sobre o tema e tenho especialização (stricto sensu) nessa área"
+		"YearsUsingTechOptns": {
+			"no": "Eu não uso",
+			"between_1_and_3": "Entre 1 e 3 anos",
+			"between_4_and_6": "Entre 4 e 6 anos",
+			"between_7_and_9": "Entre 7 e 9 anos",
+			"more_than_10_years": "Mais de 10 anos"
 		},
-		"years_teaching": {
-			"0": "Entre 1 e 3 anos",
-			"1": "Entre 4 e 6 anos",
-			"2": "Entre 7 e 9 anos",
-			"3": "Mais de 10 anos"
+		"TechApplicationOptns": {
+			"preparation_of_materials": "Preparação de materiais",
+			"asynchronous_learning": "Aprendizagem assíncrona",
+			"sending_emails": "Envio de emails",
+			"develop_online_tasks_evaluations": "Desenvolver tarefas/avaliações online",
+			"bureaucratic_and_planning_tasks": "Tarefas burocráticas e de planejamento",
+			"conducting_research": "Condução de pesquisas",
+			"study_group": "Grupo de estudo",
+			"use_of_tools": "Uso de ferramentas",
+			"no": "Eu não uso"
 		},
-		"years_of_uses_technology_for_teaching": {
-			"0": "Não uso",
-			"1": "Entre 1 e 3 anos",
-			"2": "Entre 4 e 6 anos",
-			"3": "Entre 7 e 9 anos",
-			"4": "Mais de 10 anos"
+		"errors": {
+			"found": "Alguns erros foram encontrados",
+			"born": "Parece que você não definiu sua data de nascimento.",
+			"personalDataRequired": "Todos os campos em Dados Pessoais são obrigatórios.",
+			"workDataRequired": "Todos os campos em Dados Profissionais são obrigatórios.",
+			"profileDataRequired": "Todos os campos em Dados de Perfil são obrigatórios.",
+			"email": "O email não é válido.",
+			"emailConfirm": "Os emails não correspondem.",
+			"password": "A senha deve ter pelo menos 6 caracteres.",
+			"passwordConfirm": "As senhas não correspondem.",
+			"tos": "Você deve aceitar os Termos e condições, e o Aviso de Privacidade do Guia Edutec."
 		},
-		"technology_application": {
-			"0": "Preparação de materiais",
-			"1": "Aprendizagem assíncrona",
-			"2": "Envio de e-mails",
-			"3": "Desenvolver tarefas/avaliações online",
-			"4": "Tarefas burocráticas e de planejamento",
-			"5": "Realização de pesquisas",
-			"6": "Grupo de estudos",
-			"7": "Uso de ferramentas"
-		}
+		"success": "Usuário criado com sucesso"
 	},
 	"SignUpFormAdminStates": {
 		"affiliationBox": {

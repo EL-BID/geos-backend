@@ -374,7 +374,7 @@
 		"school": "Escuela",
 		"teachingStage": "Etapa de enseñanza",
 		"allStages": "Todas las etapas",
-		"knowledgeArea": "Área de conocimiento / competencia curricular",
+		"knowledgeArea": "Área de conocimiento / habilidad curricular",
 		"allAreas": "Todas las áreas / habilidades",
 		"analisePeriod": "Periodo de análisis, desde",
 		"to": "Hasta que",
@@ -392,7 +392,7 @@
 		"familiarization": "Familiarización",
 		"exposure": "Exposición",
 		"teachersDistributionArea": "Distribución de los docentes por nivel de adquisición en cada área",
-		"teachersDistributionCompetence": "Distribución de los docentes por nivel de adquisición de cada competencia según el área",
+		"teachersDistributionCompetence": "Distribución de los docentes por nivel de adquisición de cada habilidad según el área",
 		"notDisplayValues": "No mostrar valores",
 		"displayValuesChart": "Mostrar los valores en el gráfico",
 		"infoColor": "Cuanto más oscuro sea el color, mayor será el número de docentes en ese nivel de adquisición.",
@@ -416,7 +416,7 @@
 		"stateNetwork": "Afiliación administrativa promedio",
 		"stateCountryNetwork": "Promedio nacional",
 		"settlementLevel": "Nivel de apropiación",
-		"comparativeNetwork": "COMPARACIÓN ENTRAR EN CADA COMPETENCIA"
+		"comparativeNetwork": "COMPARACIÓN ENTRAR EN CADA HABILIDAD"
 	},
 	"DevolutiveList": {
 		"bullet1": "1 - Personalización de pautas: para cada dimensión y posible nivel de la Guía EduTec existe un conjunto de instrucciones o recomendaciones de lo que el director puede hacer para mejorar en esa dimensión. Estos textos se pueden personalizar, indicando programas y pautas específicas para su red.",
@@ -438,7 +438,7 @@
 		"levels.2": "Adaptación",
 		"levels.3": "Integración",
 		"levels.4": "Transformación",
-		"instruction.txt1": "La retroalimentación presenta su nivel de apropiación respecto al conocimiento y usos de las tecnologías digitales de dos formas, por área (Pedagógica, Ciudadanía Digital y Desarrollo Profesional) y por competencia (en total, son 12 habilidades).",
+		"instruction.txt1": "La retroalimentación presenta su nivel de apropiación respecto al conocimiento y usos de las tecnologías digitales de dos formas, por área (Pedagógica, Ciudadanía Digital y Desarrollo Profesional) y por habilidad (en total, son 12 habilidades).",
 		"instruction.txt2": "Los niveles de apropiación son cinco:",
 		"instruction.areas": "areas",
 		"instruction.comp": "habilidades",
@@ -462,7 +462,7 @@
 		"label.city": "Nivel geografico 4",
 		"label.state": "Nivel geografico 3",
 		"label.consolidated_results_by_area": "Resultados consolidados por area",
-		"label.results_by_competence": "Resultado por competencia",
+		"label.results_by_competence": "Resultado por habilidad",
 		"label.results": "Resultado",
 		"label.area_ped": "Pedagogía",
 		"label.area_cid": "Ciudadanía Digital",
@@ -631,13 +631,13 @@
 		"btnAccess": "Acceder"
 	},
 	"Dimensions": {
-		"competenceDescription": "Este eje trata de los conocimientos y las habilidades sobre el uso de las TIC como herramienta de enseñanza. A veces los docentes muestran habilidades en el uso personal de las TIC; sin embargo, tanto los docentes como los directivos y especialistas que apoyan en el uso de las TIC en el centro pueden no ser conscientes de su potencial educativo. Así, el eje prevé la competencia de los docentes, de los gestores educativos y del personal de apoyo. Se hace hincapié en la diferencia entre las habilidades en materia de TIC y las habilidades de uso didáctico de las TIC, que implica saber cuándo, cómo y por qué utilizarlas.",
+		"competenceDescription": "Este eje trata de los conocimientos y las habilidades sobre el uso de las TIC como herramienta de enseñanza. A veces los docentes muestran habilidades en el uso personal de las TIC; sin embargo, tanto los docentes como los directivos y especialistas que apoyan en el uso de las TIC en el centro pueden no ser conscientes de su potencial educativo. Así, el eje prevé la habilidad de los docentes, de los gestores educativos y del personal de apoyo. Se hace hincapié en la diferencia entre las habilidades en materia de TIC y las habilidades de uso didáctico de las TIC, que implica saber cuándo, cómo y por qué utilizarlas.",
 		"competenceTitle": "HABILIDADES/FORMACIÓN",
 		"dimensionsDescription1": "Sabemos que elaborar un buen plan tecnológico para tu red es un gran reto. Hay que tomar decisiones importantes: ¿cómo saber cuándo invertir en equipos y cuándo invertir, por ejemplo, en la formación de los docentes en el uso de la tecnología? La teoría de las 4 dimensiones es un marco conceptual importante para guiar la elaboración de planes de innovación y tecnología coherentes. Las cuatro dimensiones son:",
 		"dimensionsDescription2": "El uso de las tecnologías en la educación subraya la inserción del centro en el contexto digital, solicitando acciones que impulsen este movimiento, como la capacitación continua de los educadores en el uso de dispositivos electrónicos en la práctica docente desde una perspectiva de articulación entre la teoría y la práctica; la curaduría de los recursos que deben ser utilizados en los momentos de enseñanza y aprendizaje; la infraestructura adecuada para fomentar la práctica docente y la participación activa de los estudiantes, y la estrategia para tener éxito en todo este proceso. Al introducir la innovación y la tecnología en las políticas educativas, se gana en cuatro aspectos principales: gestión, calidad, equidad y contemporaneidad.",
 		"dimensionsDescription3": "Las políticas de implementación de tecnologías en la educación suelen establecer como visión u objetivo de sus propuestas el uso de las tecnologías de la información y la comunicación (TIC) para mejorar la calidad de la educación, además de abordar cuestiones de infraestructura, habilidades de sus gestores y docentes y la existencia de materiales de apoyo educativo.",
 		"dimensionsDescription4": "En este contexto, el Four in Balance funciona como referencia de planificación en Brasil, con el objetivo de cualificar la educación en el país y servir de base conceptual para analizar las políticas y acciones ya implementadas, así como para los proyectos futuros. Sin embargo, dadas las diferentes realidades de los dos países, es conveniente reconfigurar esta política para que dé lugar a una nueva propuesta que considere la estructura y el funcionamiento de los sistemas educativos y las relaciones entre las esferas federal, estatal y municipal, así como el contexto de las escuelas brasileñas.",
-		"dimensionsDescription5": "El concepto Four in Balance se ha utilizado tanto en el desarrollo como en la evaluación de situaciones educativas que tienen como objetivo el uso eficaz y eficiente de las TIC en la educación. Se compone de dos elementos: el humano y el tecnológico. El elemento humano consta de dos ejes: la visión y la competencia; mientras que el elemento tecnológico está compuesto por los recursos educativos digitales y la infraestructura.",
+		"dimensionsDescription5": "El concepto Four in Balance se ha utilizado tanto en el desarrollo como en la evaluación de situaciones educativas que tienen como objetivo el uso eficaz y eficiente de las TIC en la educación. Se compone de dos elementos: el humano y el tecnológico. El elemento humano consta de dos ejes: la visión y la habilidad; mientras que el elemento tecnológico está compuesto por los recursos educativos digitales y la infraestructura.",
 		"dimensionsTitle": "CUATRO DIMENSIONES EN EL USO DE LA TECNOLOGÍA",
 		"educationalResourcesDescription1": "La enseñanza debe integrar las tecnologías y los medios digitales en el plan de estudios, y este uso debe estar en consonancia con la visión educativa del centro. Así, el eje de contenidos y recursos digitales se refiere a los materiales didácticos digitales creados con fines educativos y a las fuentes generales de información; a los paquetes de software educativo y a los sistemas de TIC, como los entornos virtuales de aprendizaje, los expedientes de los estudiantes y los sistemas de gestión de la información de los estudiantes; a las aplicaciones y al software del departamento en general, al software para controlar la agenda y a las herramientas de gestión de los recursos humanos.",
 		"educationalResourcesDescription2": "Los directivos y los docentes deben ser competentes tanto para obtener información sobre el software disponible y sus respectivos contenidos como para saber hacer una elección responsable, de acuerdo con la visión educativa del centro.",
@@ -847,7 +847,7 @@
 		"btnDownloadAnswers": "DESCARGAR RESPUESTAS",
 		"btnFilter": "Filtrar",
 		"btnNext": "SIGUIENTES",
-		"competenceLevel": "Nivel de competencia",
+		"competenceLevel": "Nivel de habilidad",
 		"helmetTitle": "Seguimiento de las respuestas",
 		"infrastructureLevel": "Nivel de infraestructura",
 		"no": "No",
@@ -912,7 +912,7 @@
 		"logoGuiaEdutec": "GUÍA {edutec}",
 		"createdByCIEB": "by CIEB",
 		"schoolDescription": "Conoce el grado de implementación de las tecnologías digitales en tu centro educativo",
-		"teacherDescription": "Evalúa tu nivel de competencia digital",
+		"teacherDescription": "Evalúa tu nivel de habilidad digital",
 		"teachingNetworkDescription": "Conoce el grado de implementación de las tecnologías digitales en los centros de tu red educativa",
 		"title": "Evaluación de Habilidades Digitales",
 		"poweredBy": "POWERED BY"
@@ -1173,7 +1173,7 @@
 		"selfEvaluation": "Diagnóstico",
 		"sharing": "Compartir",
 		"communication": "Comunicación",
-		"ownershipLevelsDescription": "El resultado de el Diagnóstico se expresa en un informe de resultados que muestra el perfil del / de la docente en cinco niveles de desarrollo, en cada área y en cada competencia:",
+		"ownershipLevelsDescription": "El resultado de el Diagnóstico se expresa en un informe de resultados que muestra el perfil del / de la docente en cinco niveles de desarrollo, en cada área y en cada habilidad:",
 		"ownershipLevels": "Niveles de desarrollo",
 		"exposure": "Exposición",
 		"exposureDescription": "Cuando no se usan las tecnologías en la práctica docente o cuando el/la docente requiere del apoyo de un tercero para utilizarlas, y también cuando su uso es solo personal. El/la docente identifica las tecnologías como una herramienta, no como parte de la cultura digital.",
@@ -1465,7 +1465,7 @@
 		"pageHeader": "Impresión de cuestionarios"
 	},
 	"ProgressDirector": {
-		"competence": "COMPETENCIA",
+		"competence": "HABILIDAD",
 		"infrastructure": "INFRAESTRUCTURA",
 		"resources": "RECURSOS",
 		"vision": "VISIÓN"
@@ -1564,7 +1564,7 @@
 		"dimension3": "DIMENSIÓN 3 - RECURSOS EDUCATIVOS DIGITALES",
 		"dimension4": "DIMENSIÓN 4 - INFRAESTRUCTURA",
 		"visionSchoolDistribution": "Distribución de escuelas en los cuatro niveles para la dimensión VISIÓN:",
-		"competenceAndFormationSchoolDistribution": "Distribución de escuelas en los cuatro niveles para la dimensión COMPETENCIA:",
+		"competenceAndFormationSchoolDistribution": "Distribución de escuelas en los cuatro niveles para la dimensión HABILIDAD:",
 		"educationalResourcesSchoolDistribution": "Distribución de escuelas en los cuatro niveles para la dimensión RECURSOS EDUCATIVOS DIGITALES:",
 		"infrastructureSchoolDistribution": "Distribución de escuelas en los cuatro niveles para la dimensión INFRAESTRUCTURA:",
 		"schoolDistributionByDimension": "Distribución de las escuelas según su respuesta a las diferentes preguntas de la dimensión:",
@@ -2264,9 +2264,9 @@
 			"password": "La contraseña debe tener al menos 6 caracteres",
 			"confirmPassword": "Repita la contraseña nuevamente",
 			"cpf": "Introduce solo los números",
-			"birthDate": "Formato correcto DD/MM/AAAA",
 			"email": "Introduce una dirección de correo electrónico válida",
-			"year_finished_formation": "Por favor, ingrese sólo el año."
+			"year_finished_formation": "Por favor, ingrese sólo el año.",
+			"format": "Format"
 		},
 		"loading": "Cargando...",
 		"noOptions": "No hay más opciones.",
@@ -2285,7 +2285,7 @@
 		"radioNoAcceptshareDataDescription": "Si la secretaría tiene acceso a los datos nominales de los docentes, es posible identificar las demandas e intereses de cada uno y, con ello, diseñar una formación focalizada y significativa. ¿Estás seguro de que prefieres compartir de forma anónima?",
 		"notificationNoSharingAnswers": "Si el Departamento de Educación tiene acceso a los datos nominales de los docentes, es posible identificar las demandas e intereses de cada uno y, con ello, diseñar una formación dirigida y significativa. ¿Estás seguro de que prefieres compartir de forma anónima?",
 		"register": "REGISTRARSE",
-		"termsOfUseModalTitle": "Términos de uso - Guía EduTec Diagnóstico de Competencia Digital de Docentes",
+		"termsOfUseModalTitle": "Términos de uso - Guía EduTec Diagnóstico de Habilidad Digital de Docentes",
 		"titleVerificationModal": "VERIFICACIÓN DE DATOS DE REGISTRO",
 		"questionVerificationModal": "¿Es usted docente de este centro educativo?",
 		"placeholderStages": "Seleccione una opción",
@@ -2355,7 +2355,8 @@
 			"bureaucratic_and_planning_tasks": "Tareas burocráticas y de planificación",
 			"conducting_research": "Realización de investigaciones",
 			"study_group": "Grupo de estudios",
-			"use_of_tools": "Uso de herramientas"
+			"use_of_tools": "Uso de herramientas",
+			"no": "No lo uso"
 		},
 		"errors": {
 			"found": "Se encontraron algunos errores",
