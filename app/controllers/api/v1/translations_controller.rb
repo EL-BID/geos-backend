@@ -6,10 +6,11 @@ module Api
         #Read the JSON tranlation file located at app/assets/translations and respond it
         def get_translation_by_lang
         
-        params.permit(:lang, :format)
+        params.permit(:lang, :dictionary, :format)
         lang = params[:lang]
+        dictionary = params[:dictionary] || 'legacy'
 
-        file_path = "app/assets/translations/#{lang}.json"
+        file_path = "app/assets/lang-dictionaries/#{dictionary}/#{lang}.json"
 
         if File.exist?(file_path)
           file = File.read(file_path)
