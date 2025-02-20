@@ -1349,6 +1349,7 @@
 		"currentCycle": "Ciclo atual",
 		"answerSurvey": "Responda o questionário",
 		"print": "Imprima o questionário",
+		"printContext": "Imprimir o Questionário de Contexto",
 		"manageInvitation": "Gerenciar convite",
 		"invitationEmail": "O convite inicialmente foi enviado para o e-mail",
 		"continueSurvey": "Continue o questionário",
