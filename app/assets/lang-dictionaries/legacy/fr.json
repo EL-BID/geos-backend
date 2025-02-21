@@ -2218,7 +2218,7 @@
 			"state": "Niveau géographique 3",
 			"city": "Niveau géographique 4",
 			"school": "Centre éducatif",
-			"teachingStages": "Niveaux d'enseignement",
+			"stages": "Niveaux d'enseignement",
 			"knowledges": "Domaine de connaissances / Composant curriculaire",
 			"formation": "Au cours de votre carrière, avez-vous suivi ou suivez-vous actuellement une formation en innovation et technologie ?",
 			"formationLevel": "Quel est votre plus haut niveau d'éducation ?",
@@ -2337,6 +2337,22 @@
 			"study_group": "Groupe d'étude",
 			"use_of_tools": "Utilisation d'outils",
 			"no": "Je ne l'utilise pas"
+		},
+		"StagesOptns": {
+			"primary_1": "Primaire 1",
+			"primary_2": "Primaire 2",
+			"primary_3": "Primaire 3"
+		},
+		"KnowledgesOptns": {
+			"primary_1_english": "Primaire 1 - Anglais",
+			"primary_1_phys_ed": "Primaire 1 - Éducation Physique",
+			"primary_1_all": "Primaire 1 - Toutes les matières",
+			"primary_2_english": "Primaire 2 - Anglais",
+			"primary_2_phys_ed": "Primaire 2 - Éducation Physique",
+			"primary_2_all": "Primaire 2 - Toutes les matières",
+			"primary_3_english": "Primaire 3 - Anglais",
+			"primary_3_phys_ed": "Primaire 3 - Éducation Physique",
+			"primary_3_all": "Primaire 3 - Toutes les matières"
 		},
 		"errors": {
 			"found": "Des erreurs ont été trouvées",

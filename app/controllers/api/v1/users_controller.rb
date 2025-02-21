@@ -42,7 +42,9 @@ module Api
               :years_using_tech,
               tech_application: []
           ],
-          principal_data: []
+          principal_data: [],
+          stages: [],
+          knowledges: []
         ) 
       end
 

@@ -2219,7 +2219,7 @@
 			"state": "Geographic Level 3",
 			"city": "Geographic Level 4",
 			"school": "Educational Center",
-			"teachingStages": "Education Stages",
+			"stages": "Education Stages",
 			"knowledges": "Knowledge Area / Curriculum Component",
 			"formation": "Throughout your career, have you completed or are you currently undergoing any training in innovation and technology?",
 			"formationLevel": "What is your highest level of education?",
@@ -2338,6 +2338,22 @@
 			"study_group": "Study group",
 			"use_of_tools": "Use of tools",
 			"no": "I don’t use it"
+		},
+		"StagesOptns": {
+			"primary_1": "Primary 1",
+			"primary_2": "Primary 2",
+			"primary_3": "Primary 3"
+		},
+		"KnowledgesOptns": {
+			"primary_1_english": "Primary 1 - English",
+			"primary_1_phys_ed": "Primary 1 - Physical Education",
+			"primary_1_all": "Primary 1 - All areas",
+			"primary_2_english": "Primary 2 - English",
+			"primary_2_phys_ed": "Primary 2 - Physical Education",
+			"primary_2_all": "Primary 2 - All areas",
+			"primary_3_english": "Primary 3 - English",
+			"primary_3_phys_ed": "Primary 3 - Physical Education",
+			"primary_3_all": "Primary 3 - All areas"
 		},
 		"errors": {
 			"found": "Some errors were found",
