@@ -37,6 +37,8 @@ class User
   field :formation_level,            type: Hash
   field :manager_file,               type: Object
   field :phone_number,               type: String
+  field :teacher_data,               type: Object
+  field :principal_data,              type: Object
   
   enum :profile, [:principal, :other, :teacher, :admin, :admin_state, :admin_city, :monitor_state, :monitor_city, :monitor_state_regional, :monitor_city_regional, :admin_country]
 
