@@ -7,6 +7,9 @@ ruby '3.0.0'
 #gem 'rails', '~> 5.0', '>= 5.0.1'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'rails-i18n', '~> 6.0.0'
+gem 'activesupport', '~> 6.0'
+gem 'concurrent-ruby', '1.3.4'
+
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
