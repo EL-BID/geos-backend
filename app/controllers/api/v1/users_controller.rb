@@ -363,9 +363,12 @@ module Api
             if @survey_schedules.length != 0
               survey_schedule_id = @survey_schedules.sort({created_at: 1}).last["_id"]
             else
-              new_schedule = SurveySchedule.new(:state_id => user_params[:city_id], :survey_id => @survey.id, :affiliation_id => affiliation_id)
+              new_schedule = SurveySchedule.new(:state_id => user_params[:state_id], :survey_id => @survey.id, :affiliation_id => affiliation_id)
               if new_schedule.save
                 survey_schedule_id = new_schedule.id
+              else
+                Rails.logger.error("Failed to save new survey schedule: #{new_schedule.errors.full_messages}")
+                # Handle the error appropriately
               end
             end
 
