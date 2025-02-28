@@ -653,6 +653,9 @@ module Api
               @avg_pedagogica = calc_median(arr_pedagogica)
               @avg_cidadania = calc_median(arr_cidadania)
               @avg_desenvolvimento = calc_median(arr_desenvolvimento)
+              Rails.logger.info("@avg_pedagogica: #{@avg_pedagogica}")
+              Rails.logger.info("@avg_cidadania: #{@avg_cidadania}")
+              Rails.logger.info("@avg_desenvolvimento: #{@avg_desenvolvimento}")
             end
 
             @feedbacks = feedbacks_local
@@ -721,7 +724,7 @@ module Api
         arr.sort!
         length = arr.count
         center = length/2
-        length.even? ? ((arr[center] + arr[center - 1])/2).round : arr[center].round
+        length.even? ? ((arr[center] + arr[center - 1])/2).floor : arr[center].floor
       end
 
       def school_plans_answers
