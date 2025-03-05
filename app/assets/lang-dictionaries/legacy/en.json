@@ -1404,7 +1404,11 @@
 		"teacherSelfEvaluationDescription": "Perform the Digital Teacher Skills mapping in your network and find out the profile of the teachers regarding the adoption of technology.",
 		"teacherSelfEvaluationLink": "MAP TEACHERS",
 		"teacherSelfEvaluationTitle": "Teacher Self-Assessment",
-		"tool": "Tool"
+		"tool": "Tool",
+		"trainingDegree": "TRAINING / EDUCATION",
+		"followUpReportTitle": "Follow-Up Report on the Collection of Self-Assessments",
+		"followUpReportDesc": "Generates an Excel report that allows tracking of the principals who have registered and how many have completed the Edutec Guide, by center and by each geographic division.",
+		"followUpReportLink": "Generate Report"
 	},
 	"PasswordChange": {
 		"btnSubmit": "CHANGE PASSWORD",

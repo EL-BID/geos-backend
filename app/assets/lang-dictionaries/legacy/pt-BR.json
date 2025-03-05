@@ -1282,7 +1282,11 @@
 		"teacherSelfEvaluationTitle": "Autoavaliação de Professores",
 		"teacherSelfEvaluationDescription": "Realize o mapeamento de Competências Digitais de Professores em sua rede e descubra qual o perfil dos docentes quanto à adoção de tecnologia.",
 		"teacherSelfEvaluationLink": "MAPEAR PROFESSORES",
-		"tool": "Ferramenta"
+		"tool": "Ferramenta",
+		"trainingDegree": "TREINAMENTO / FORMAÇÃO",
+		"followUpReportTitle": "Relatório de Acompanhamento da Coleta de Autoavaliações",
+		"followUpReportDesc": "Gera um relatório em formato Excel que permite acompanhar os diretores que se registraram e quantos responderam ao Guia Edutec, por centro e por cada divisão geográfica.",
+		"followUpReportLink": "Gerar relatório"
 	},
 	"PasswordChange": {
 		"pageHeader": "Crie sua nova senha",

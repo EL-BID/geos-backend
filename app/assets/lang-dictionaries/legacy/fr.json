@@ -1403,7 +1403,11 @@
 		"teacherSelfEvaluationDescription": "Effectuez le relevé de Compétences Numériques du Corps enseignant au sein de votre réseau et découvrez quel est le profil des enseignants en matière d’adoption de la technologie.",
 		"teacherSelfEvaluationLink": "EFFECTUER LE RELEVÉ DU CORPS ENSEIGNANT",
 		"teacherSelfEvaluationTitle": "Auto-évaluation du Corps enseignant",
-		"tool": "Outil"
+		"tool": "Outil",
+		"trainingDegree": "FORMATION / ÉDUCATION",
+		"followUpReportTitle": "Rapport de Suivi de la Collecte des Auto-Évaluations",
+		"followUpReportDesc": "Génère un rapport au format Excel permettant de suivre les directeurs qui se sont inscrits et combien ont répondu au Guide Edutec, par centre et par chaque division géographique.",
+		"followUpReportLink": "Générer le rapport"
 	},
 	"PasswordChange": {
 		"btnSubmit": "CHANGER LE MOT DE PASSE",
