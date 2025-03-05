@@ -442,7 +442,7 @@ module Api
         aux = search_params
         aux.except(:survey_id)
 
-        @school_answer_search_details = SchoolAnswerSearch.new(aux)
+        @school_answer_search_details = SchoolAnswerSearch.new(**aux)
         @survey_schedule_id = params[:survey_schedule_id]
 
         answered_sample = @school_answer_search_details.answered_sample_count

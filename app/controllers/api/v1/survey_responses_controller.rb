@@ -407,6 +407,8 @@ module Api
 
           questions.each do |question|
             question_results = Array.new
+            response_array.each do |survey_response|
+            end
             if question.type == 'pc' && question.weight > 0
               questions_add_ons = questions.select { |q| q.survey_id == survey_id && q.compound == true && q.compound_ref == question.compound_ref && !q.compound_first }
               questions_infra_D = []
@@ -485,7 +487,7 @@ module Api
                   question_results.each do |qr|
                     max_shift_students = [qr["student_diurnal_count"], qr["student_vespertine_count"], qr["student_nocturnal_count"], qr["student_full_count"]].map(&:to_i).max
                     qvalue = students_per_computer_score(max_shift_students, qr["options"][0])
-                    # puts "length #{question_results.length} | question._id #{question._id} | qr #{qr["options"][0]} | qvalue #{qvalue}";
+                    #puts "length #{question_results.length} | question._id #{question._id} | qr #{qr["options"][0]} | qvalue #{qvalue}";
                     if qvalue * question.weight < 1.02
                       qvalue = qvalue * question.weight
                     end
@@ -510,14 +512,14 @@ module Api
                       local[4] +=1
                     end
                   end
+                  localpc[1] = 100*localpc[1] / question_results.length
+                  localpc[2] = 100*localpc[2] / question_results.length
+                  localpc[3] = 100*localpc[3] / question_results.length
+                  localpc[4] = 100*localpc[4] / question_results.length
+                  localpc[5] = 100*localpc[5] / question_results.length
+                  localpc[6] = 100*localpc[6] / question_results.length
+                  results_questions_pc.push(localpc)
                 end
-                localpc[1] = 100*localpc[1] / question_results.length
-                localpc[2] = 100*localpc[2] / question_results.length
-                localpc[3] = 100*localpc[3] / question_results.length
-                localpc[4] = 100*localpc[4] / question_results.length
-                localpc[5] = 100*localpc[5] / question_results.length
-                localpc[6] = 100*localpc[6] / question_results.length
-                results_questions_pc.push(localpc)
               end
               if  question.weight > 0
                 local[1] = 100*local[1] / question_results.length
