@@ -1344,6 +1344,13 @@
 				"body19": "Enfatizamos que su participación es muy importante para el desarrollo de su escuela.",
 				"body20": "Sinceramente,",
 				"body21": "Equipo Guia EduTec"
+			},
+			"sendFeedback": {
+				"body": "Don't worry, click the button below to create your new password",
+				"bodyFoot": "If you have not requested a password change, please ignore this email",
+				"bodyTitle": "Forgot your password?",
+				"subject": "[EDUTEC GUIDE] Password change request",
+				"submitButton": "Create new password"
 			}
 		}
 	},

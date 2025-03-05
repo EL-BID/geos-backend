@@ -412,11 +412,7 @@ class Job
   end
 
   def localSendEmail(user)
-    if Rails.env.production? || Rails.env.staging?
-      UserMailer.send_response(user, self).deliver
-    else
-      true
-    end
+    UserMailer.send_response(user, self).deliver
   end
 
   def complete_proccess(user)

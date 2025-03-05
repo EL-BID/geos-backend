@@ -48,15 +48,11 @@ class SurveyResponse
   def perform
     return unless self.response_answers.present?
     complete_response
-    complete? && localSendEmail(user)
+    localSendEmail(user)
   end
 
   def localSendEmail(user)
-    if Rails.env.production? || Rails.env.staging?
-      UserMailer.send_response(user, self).deliver
-    else
-      true
-    end
+    UserMailer.send_response(user, self).deliver
   end
 
   def lst_response_answers(user_id)
@@ -257,6 +253,7 @@ class SurveyResponse
   end
 
   memoize :section_scores
+
 
   protected
   def without_callback(*args)

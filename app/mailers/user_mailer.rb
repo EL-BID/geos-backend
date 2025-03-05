@@ -50,7 +50,7 @@ class UserMailer < Devise::Mailer
     @user = user
     @profile = user._profile.to_s
     @response_url = ENV['BACKEND_URL']+"/api/v1/survey/feedback/"+response.survey_id.to_param+"/"+response.id.to_param+"?access_token=" + user.authenticity_token.to_s
-    mail(to: @user.email, from: ENV['MAIL_FROM'], subject: translation['subject'])
+    mail(to: @user.email, from: ENV['MAIL_FROM'], subject: 'Edutech Guide Feedback')
   end
 
 end

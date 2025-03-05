@@ -1332,6 +1332,13 @@
 				"body8": "Mot de passe:",
 				"body9": "Pour répondre au questionnaire, il suffit d'accéder au lien ci-dessous :",
 				"subject": "[GUIDE EDUTEC] INVITATION"
+			},
+			"sendFeedback": {
+				"body": "Don't worry, click the button below to create your new password",
+				"bodyFoot": "If you have not requested a password change, please ignore this email",
+				"bodyTitle": "Forgot your password?",
+				"subject": "[EDUTEC GUIDE] Password change request",
+				"submitButton": "Create new password"
 			}
 		}
 	},
