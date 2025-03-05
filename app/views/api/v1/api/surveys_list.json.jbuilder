@@ -29,7 +29,7 @@ json.surveys @list_surveys do |survey|
         json.is_cyclic false
       end
       json.answers @user_answers do |answer|
-        if (answer.survey_id == schedule.survey_id && answer.survey_schedule_id == schedule.id)
+        #if (answer.survey_id == schedule.survey_id && answer.survey_schedule_id == schedule.id)
           json.id answer.id
           json.in_use answer.in_use
           json.status answer.status
@@ -49,7 +49,7 @@ json.surveys @list_surveys do |survey|
           if answer.vision_level == -100
             json.old_response true
           end
-        end
+        #end
       end
     end
   else
