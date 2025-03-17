@@ -4,7 +4,7 @@
 		"acknowledgmentPrincipal": "Merci d'avoir répondu au questionnaire !",
 		"btnDevolutiveAccess": "ACCÉDER AU RETOUR",
 		"devolutiveAccessPrincipal": "Dans quelques minutes, vous recevrez un email automatique contenant une analyse indiquant le niveau d’adoption de technologie de votre centre dans chacune des dimensions analysées. Vous recevrez également des suggestions d’actions concrètes que vous pourrez mettre en œuvre afin d’assurer que l’utilisation de la technologie contribue de plus en plus à l’enseignement et à la gestion dans votre centre.",
-		"devolutiveAccessTeacher": "Accédez à l’analyse et vérifiez votre niveau d’appropriation en ce qui concerne les connaissances et utilisations des technologies numériques, en plus de vérifier les suggestions afin de perfectionner vos pratiques professionnelles."
+		"devolutiveAccessTeacher": "En accédant aux retours en cliquant sur le bouton ci-dessous, vous pourrez télécharger un fichier PDF contenant un retour personnalisé, où vous pourrez identifier votre niveau de développement des compétences numériques. Vous y trouverez également des ressources sélectionnées par des experts pour vous aider à vous améliorer dans chaque compétence."
 	},
 	"ActionsMenu": {
 		"schools": "Écoles",
