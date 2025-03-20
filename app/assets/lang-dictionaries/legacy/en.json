@@ -2368,7 +2368,7 @@
 		},
 		"errors": {
 			"found": "Some errors were found",
-			"born": "It seems you have not set your date of birth.",
+			"born": "It seems you have not set your date of birth or have selected an incorrect date.",
 			"personalDataRequired": "All fields in Personal Data are required.",
 			"workDataRequired": "All fields in Work Data are required.",
 			"profileDataRequired": "All fields in Profile Data are required.",

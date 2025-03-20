@@ -2246,7 +2246,7 @@
 		},
 		"errors": {
 			"found": "Alguns erros foram encontrados",
-			"born": "Parece que você não definiu sua data de nascimento.",
+			"born": "Parece que você não definiu sua data de nascimento ou selecionou uma data incorreta.",
 			"personalDataRequired": "Todos os campos em Dados Pessoais são obrigatórios.",
 			"workDataRequired": "Todos os campos em Dados Profissionais são obrigatórios.",
 			"profileDataRequired": "Todos os campos em Dados de Perfil são obrigatórios.",
