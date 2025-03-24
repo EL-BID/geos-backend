@@ -8,6 +8,7 @@ class ResponseAnswerSimple
   field :user_id, type: BSON::ObjectId
   field :survey_response_id, type: BSON::ObjectId
   field :options, type: Array
+  field :other_text, type: String
   field :survey_question_id, type: BSON::ObjectId
 
 end

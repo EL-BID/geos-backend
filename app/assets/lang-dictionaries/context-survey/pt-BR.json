@@ -35,6 +35,7 @@
 		"btnStart": "Iniciar questionário"
 	},
 	"ui": {
-		"btnContinue": "Continuar com o questionário"
+		"btnContinue": "Continuar com o questionário",
+		"indique": "Indique sua resposta"
 	}
 }
