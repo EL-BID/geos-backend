@@ -1,0 +1,19 @@
+{
+	"h1": "Edit user",
+	"personal_data": "Personal data",
+	"laboral_data": "Laboral data",
+	"label": {
+		"name": "Full name",
+		"born": "Birth date",
+		"gender": "Gender"
+	},
+	"help": {
+		"name": "Required. Max. 100 characters"
+	},
+	"error": {},
+	"ui": {
+		"select": {
+			"placeholder": "Please select"
+		}
+	}
+}
