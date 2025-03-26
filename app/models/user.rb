@@ -27,7 +27,7 @@ class User
   field :responsible_email,          type: String, default: ''
   field :responsible_phone_number,   type: String, default: ''
   field :type,                       type: String, default: ''
-  field :stages,                     type: String, default: ''
+  field :stages,                     type: Array
   field :knowledges,                 type: Array
   field :origin,                     type: String
   field :invited_survey,             type: Array

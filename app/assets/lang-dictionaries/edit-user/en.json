@@ -1,11 +1,13 @@
 {
 	"h1": "Edit user",
 	"personal_data": "Personal data",
-	"laboral_data": "Laboral data",
+	"laboral_data": "Professional data",
 	"label": {
 		"name": "Full name",
-		"born": "Birth date",
-		"gender": "Gender"
+		"born": "Date of Birth",
+		"gender": "Which gender do you identify with?",
+		"stages": "Education stages",
+		"knowledges": "Knowledge area / Curriculum component"
 	},
 	"help": {
 		"name": "Required. Max. 100 characters"
@@ -13,7 +15,8 @@
 	"error": {},
 	"ui": {
 		"select": {
-			"placeholder": "Please select"
-		}
+			"placeholder": "Select an option"
+		},
+		"save": "Save"
 	}
 }
