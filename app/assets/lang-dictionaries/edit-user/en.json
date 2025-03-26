@@ -12,7 +12,12 @@
 	"help": {
 		"name": "Required. Max. 100 characters"
 	},
-	"error": {},
+	"error": {
+		"found": "Some erros were found",
+		"personalDataRequired": "All Personal data fields are required",
+		"workDataRequired": "All Professional data fields are required",
+		"born": "It seems you have not set your date of birth or have selected an incorrect date."
+	},
 	"ui": {
 		"select": {
 			"placeholder": "Select an option"
