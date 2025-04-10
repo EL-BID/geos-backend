@@ -412,7 +412,7 @@ module Api
 
         if @user._profile == "teacher"
           if user_params[:born].blank? || user_params[:gender].blank?
-            render json: { message: 'Born and gender cannot be empty for teachers' }, status: :unprocessable_entity
+            render json: { message: 'Born and gender cannot be empty' }, status: :unprocessable_entity
             return
           end
         end
