@@ -770,16 +770,20 @@ module Api
       def generate_scores
         I18n.locale =  'pt-BR'
         raise 'error' unless params[:id_response].present?
+
         @user = current_user
+        @lang = params[:lang]
+
         valid = false
         @response = SurveyResponse.includes(:response_answers, :school).find(params[:id_response])
         @survey = Survey.find(@response.survey_id)
+        
         if @survey.has_combined
           @surveyResponseCombined = getCombinedResponses(@response)
         end
         @responseAnswersDup = @response.response_answers.to_a
         @arrGuests = Array.new
-        if !@user.nil? && @response.perform
+        if !@user.nil? && @response.perform(@lang)
           if @response.survey.type == "school"
             @response.school.update_attributes({:answered => true})
           end

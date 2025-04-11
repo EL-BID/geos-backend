@@ -21,6 +21,7 @@ class UserMailer < Devise::Mailer
     @user = user
     @token = raw
     @translation = translation
+	@response_url = ENV['FRONTEND_URL'] + "/alterar-senha?token="+@token
     mail(to: @user.email, from: ENV['MAIL_FROM'], subject: translation['subject'])
   end
 
@@ -46,11 +47,18 @@ class UserMailer < Devise::Mailer
   end
 
   # usermail
-  def send_response(user, response)
+  def send_response(user, response, lang)
     @user = user
+    @lang = get_translation_email_feedback(lang)
     @profile = user._profile.to_s
-    @response_url = ENV['BACKEND_URL']+"/api/v1/survey/feedback/"+response.survey_id.to_param+"/"+response.id.to_param+"?access_token=" + user.authenticity_token.to_s + "&lang=en"
-    mail(to: @user.email, from: ENV['MAIL_FROM'], subject: 'Edutech Guide Feedback')
+    @response_url = ENV['BACKEND_URL']+"/api/v1/survey/feedback/"+response.survey_id.to_param+"/"+response.id.to_param+"?access_token=" + user.authenticity_token.to_s + "&lang="+lang
+    mail(to: @user.email, from: ENV['MAIL_FROM'], subject: @lang['subject'])
+  end
+
+  def get_translation_email_feedback(lang)
+	lang = 'en' if lang.nil? || lang.strip.empty?
+    file_path = "app/assets/lang-dictionaries/email-feedback/#{lang}.json"
+    JSON.parse(File.read(file_path))
   end
 
 end
