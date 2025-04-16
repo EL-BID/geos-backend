@@ -159,7 +159,8 @@ module Api
         phone_number = params[:phone_number]
         lang = params[:lang]
         I18n.locale =  (!lang.nil?) ? lang :  I18n.default_locale
-        newUserPassword = get_translation_newUserPassword
+        #newUserPassword = get_translation_newUserPassword
+        newUserPassword = params[:password]
 
         if user.admin?
           if !newUserPassword.nil?
@@ -174,14 +175,14 @@ module Api
                                 country_id: BSON::ObjectId.from_string(country_id),
                                 country_name: country_name,
                                 phone_number: phone_number,
-                                password: SecureRandom.alphanumeric(10),
+                                password: newUserPassword,
                                 _profile: "admin_country"
                               )
                 if user.save
                   emailT = newUserPassword
                   errorMsg = nil                  
                   begin
-                    UserMailer.sendt_password_new_user(user, emailT).deliver
+                  #  UserMailer.sendt_password_new_user(user, emailT).deliver
                   rescue => ex
                     errorMsg = "User not saved. #{ex}"
                   end
