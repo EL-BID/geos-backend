@@ -45,14 +45,15 @@ class SurveyResponse
   scope :inuse, -> { where(in_use: true) }
 
   @queue = :survey_responses
-  def perform
+  
+  def perform(lang)
     return unless self.response_answers.present?
     complete_response
-    localSendEmail(user)
+    localSendEmail(user, lang)
   end
 
-  def localSendEmail(user)
-    UserMailer.send_response(user, self).deliver
+  def localSendEmail(user, lang)
+    UserMailer.send_response(user, self, lang).deliver
   end
 
   def lst_response_answers(user_id)

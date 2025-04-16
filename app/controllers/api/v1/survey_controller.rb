@@ -290,10 +290,10 @@ module Api
         idUser = params[:idUser]
         idSurvey = params[:idSurvey]
         idSchedule	 = params[:idSchedule	]
-        answers = params[:answers]
+        answers = params[:responses]
 
         #Permited params
-        params.permit(:idUser, :idSurvey, :idSchedule, :answers)
+        params.permit(:idUser, :idSurvey, :idSchedule, :responses)
 
         #Create Response for this user if it does not exists
         @resp = SurveyResponseSimple.where(:user_id => idUser, :survey_id => idSurvey, :survey_schedule_id => idSchedule).first
@@ -313,12 +313,13 @@ module Api
           #Delete all resonse answeres for this answer, new ones will be loaded
           ResponseAnswerSimple.where(:survey_response_id => @resp.id).delete_all
 
-          #Answers format: {[idQuestion]: [idOptions]}
-          answers.each do |key, value|
+          #response_answeres objects
+          answers.each do |r|
             @resp_answer = ResponseAnswerSimple.new
             @resp_answer.survey_response_id = @resp.id
-            @resp_answer.survey_question_id = key
-            @resp_answer.options = value
+            @resp_answer.survey_question_id = r[:survey_question_id][:$oid]
+            @resp_answer.options = r[:options]
+            @resp_answer.other_text = r[:other_text]
             @resp_answer.user_id = idUser
             @resp_answer.school_id = user.school_id
             @resp_answer.save

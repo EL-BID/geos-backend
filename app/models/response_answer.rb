@@ -7,6 +7,7 @@ class ResponseAnswer
   field :survey_response_id, type: :integer
 
   field :options, type: Array
+  field :other_text, type: String
   field :survey_question_id, type: :integer
 
   belongs_to :school

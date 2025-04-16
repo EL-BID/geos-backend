@@ -400,72 +400,25 @@ module Api
 
         @user = User.find(user_params[:_id])
 
-        if @user.teacher?
-          @survey = Survey.find_by({:type => "personal"})
-          if Formation.where(:name => user_params[:initial_formation]).first.nil?
-            formation = Formation.new(:name => user_params[:initial_formation].to_s.capitalize.strip)
-            formation.save
-          end
-          if EducationalInstitution.where(:name => user_params[:institution_initial_formation]).first.nil?
-            educational_institution = EducationalInstitution.new(:name => user_params[:institution_initial_formation])
-            educational_institution.save
-          end
-          year_difference = Time.zone.now.year - Date.parse(user_params[:final_year_of_initial_formation]).year
-          if year_difference < 2
-            user_params[:range_final_year_of_initial_formation] = "less_2_years"
-          elsif year_difference >= 2 && year_difference <= 5
-            user_params[:range_final_year_of_initial_formation] = "bet_2_and_5_years"
-          elsif year_difference >= 6 && year_difference <= 10
-            user_params[:range_final_year_of_initial_formation] = "bet_6_and_10_years"
-          elsif year_difference > 10
-            user_params[:range_final_year_of_initial_formation] = "more_10_years"
-          end
-
-          survey_schedule_id = nil
-          @survey_schedules = SurveySchedule.where(:survey_id => @survey.id, :affiliation_id => BSON::ObjectId.from_string(user_params[:affiliation_id]))
-
-          if @survey_schedules.length != 0
-            survey_schedule_id = @survey_schedules.sort({created_at: 1}).last["_id"]
-          else
-            new_schedule = SurveySchedule.new(:state_id => user_params[:state_id], :survey_id => @survey.id, :affiliation_id => BSON::ObjectId.from_string(user_params[:affiliation_id]))
-            if new_schedule.save
-              survey_schedule_id = new_schedule.id
-            else
-              Rails.logger.error("Failed to save new survey schedule: #{new_schedule.errors.full_messages}")
-              # Handle the error appropriately
-            end
-          end
-
-          puts 'aaaa'
-
-          teacher_data_aux = user_params[:teacher_data].clone.as_json
-          user_params_aux = {**user_params}
-
-          @survey_response = SurveyResponse.where(survey_id: @survey.id, survey_schedule_id: BSON::ObjectId.from_string(survey_schedule_id), school_id: BSON::ObjectId.from_string(user_params[:school_id]), user_id: @user.id).first          
-          if @survey_response.nil?
-            @survey_response = SurveyResponse.new(user: @user, survey_id: @survey.id, survey_schedule_id: BSON::ObjectId.from_string(survey_schedule_id), school_id: BSON::ObjectId.from_string(user_params[:school_id]), user_id: @user.id, status: "Created")
-            if @survey_response.save
-              teacher_data_aux[:created_at] = Time.now
-            end
-          else
-            teacher_data_aux[:updated_at] = Time.now
-          end
-        
-          # teacher_data_aux_2 = {}
-          # teacher_data_aux_2[:"#{@survey_response.id}"] = teacher_data_aux
-          user_params_aux[:teacher_data] = {}
-          user_params_aux[:teacher_data][:"#{@survey_response.id}"] = teacher_data_aux
-
-          if @user[:teacher_data].nil?
-            @user[:teacher_data] = {}
-          end 
-
-          user_params_aux[:teacher_data] = @user[:teacher_data].merge(user_params_aux[:teacher_data])
-
+        if(!@user)
+          render json: {message: 'User not found'}, status: :internal_server_error
+          return
         end
 
-      
-        if @user.update(user_params_aux)
+        # Validation
+        if user_params[:name].blank? || user_params[:name].length < 3
+          render json: { message: 'Name must be at least 3 characters long' }, status: :unprocessable_entity
+          return
+        end
+
+        if @user._profile == "teacher"
+          if user_params[:born].blank? || user_params[:gender].blank?
+            render json: { message: 'Born and gender cannot be empty' }, status: :unprocessable_entity
+            return
+          end
+        end
+
+        if @user.update(user_params)
           render json: @user.as_json
         else
           render json: @user.errors, status: :internal_server_error
