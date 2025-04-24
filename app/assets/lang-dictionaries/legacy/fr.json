@@ -2382,5 +2382,8 @@
 	"created_at": "2020-12-07T10:54:34.507-03:00",
 	"lang": "fr",
 	"title": "Traductions",
-	"updated_at": "2022-02-04T15:45:09.252-03:00"
+	"updated_at": "2022-02-04T15:45:09.252-03:00",
+	"SignUpForm":{
+		"privacyNotice": "Avis de confidentialité"
+	}
 }

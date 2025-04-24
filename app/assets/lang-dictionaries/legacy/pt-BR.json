@@ -2257,5 +2257,8 @@
 		"btnConfirm": "Excluir minha conta"
 	},
 	"lang": "pt-BR",
-	"title": "Translations"
+	"title": "Translations",
+	"SignUpForm":{
+		"privacyNotice": "Aviso de Privacidade"
+	}
 }

@@ -2378,5 +2378,8 @@
 		"title": "Delete my account"
 	},
 	"lang": "en",
-	"title": "Translations"
+	"title": "Translations",
+	"SignUpForm":{
+		"privacyNotice": "Privacy Notice"
+	}
 }
