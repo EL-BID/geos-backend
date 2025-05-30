@@ -470,13 +470,13 @@
 		"label.area_detail": "A continuación encontrará el detalle para cada una de las áreas con sus respectivas comptencias, sobre los niveles de desarrollo alcanzados, además de orientaciones y sugerencias para ayudarle a progresar.",
 		"footer.div.txt1": "El poder",
 		"footer.div.txt2": "transformador de la",
-		"footer.div.txt3": "e-ducación",
+		"footer.div.txt3": "educación",
 		"footer.contact1": "Si tiene alguna sugerencia, duda, crítica, cumplido o comentario,",
 		"footer.contact2": "contáctenos.",
 		"footer.contact3": "+1 777 00 00",
 		"footer.email": "edutec@iadb.org",
-		"msgPrincipalNoAff": "Regrese al director no afiliado a la escuela",
-		"msgTeacherNoAff": "Devolver al maestro que no esté afiliado a la escuela",
+		"msgPrincipalNoAff": "Director no afiliado a ninguna escuela",
+		"msgTeacherNoAff": "Docente no afiliado a ninguna escuela",
 		"footer": {
 			"contact3": "+55 (11) 3031-7899 / +55 (11) 94544-7388",
 			"email": "contato@cieb.net.br"
@@ -937,7 +937,7 @@
 			"computersToTeachers": {
 				"item1": "Suelen ser portátiles, en algunos casos ordenadores de sobremesa en ubicaciones específicas.",
 				"item2": "Diseñado para uso exclusivo de docentes de la escuela.",
-				"item3": "Pueden estar disponibles en la sala de maestros, disponibles para que los maestros las lleven al aula o fijas dentro de las aulas."
+				"item3": "Pueden estar disponibles en la sala de docentes, disponibles para que los docentes las lleven al aula o fijas dentro de las aulas."
 			},
 			"title": "Descripción de la infraestructura",
 			"whatsIs": "¿Qué es?",
@@ -945,7 +945,7 @@
 			"whoUse": "¿Quién usa?",
 			"chargerCart": {
 				"item1": "Es un equipo, similar a un rack, diseñado para almacenar y recargar varios dispositivos simultáneamente (por ejemplo, portátiles, tabletas, etc.). Puede ser de diferentes tamaños para almacenar de 20 a 60 dispositivos.",
-				"item2": "Maestros y / o administradores escolares.",
+				"item2": "Docentes y / o administradores escolares.",
 				"item3": "Se puede almacenar en una sala específica o en un laboratorio de computación. También se puede guardar en la sala de docentes o en la oficina de la escuela."
 			},
 			"computersToAdministrative": {
@@ -971,7 +971,7 @@
 			"multimediaProjector": {
 				"item1": "Es un dispositivo que proyecta la imagen de una pantalla de computadora en paredes o estructuras utilizando tecnología basada en una lámpara.",
 				"item2": "Docentes para presentación de contenidos.",
-				"item3": "Por lo general, se instalan en el laboratorio de computación, en las aulas y / o auditorios, o están disponibles para que los maestros las lleven al aula."
+				"item3": "Por lo general, se instalan en el laboratorio de computación, en las aulas y / o auditorios, o están disponibles para que los docentes las lleven al aula."
 			},
 			"noBreak": {
 				"item1": "Equipo que utiliza la carga de baterías instaladas en el interior para alimentar los dispositivos, mientras se recarga con energía de la red. Cuando se produce un corte de energía, suministrará a los dispositivos la energía acumulada en las baterías durante unos minutos, hasta que se restablezca la energía.",
@@ -980,7 +980,7 @@
 			},
 			"printers": {
 				"item1": "Son dispositivos para imprimir contenido en papel, que en algunos casos tienen múltiples funciones, como: escanear un documento impreso.",
-				"item2": "La mayoría están disponibles para su uso por el personal administrativo de la escuela, también pueden estar disponibles para los maestros.",
+				"item2": "La mayoría están disponibles para su uso por el personal administrativo de la escuela, también pueden estar disponibles para los docentes.",
 				"item3": "En la mesa directiva, oficina de la escuela y / o sala de docentes."
 			},
 			"roboticsKit": {

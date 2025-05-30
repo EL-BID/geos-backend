@@ -676,14 +676,21 @@ module Api
         @colorPrimary = parameter.colorPrimary
         @colorSecondary = parameter.colorSecondary
         
+        @devolutiveT['stateAndProvince'] ="#{@school.state_name} / #{@school.province_name}"
         dummy = "Dummy Affiliation For Unaffiliated Users"
 
         if(@user.affiliation_name == dummy)
+          Rails.logger.info("Entre en dummy condition")
+          Rails.logger.info("@user: #{@user.name}")
           @devolutiveT['label.city'] = ""
           @devolutiveT['label.state'] = ""
           @devolutiveT['label.school'] = ""
+          @user.name = ""
           @school.city_name = ""
           @school.state_name = ""
+          @school.province_name = ""
+          @devolutiveT['stateAndProvince'] =""
+          
           if(@user.profile.to_s == "principal")
             @school.name = @devolutiveT['msgPrincipalNoAff']
           elsif(@user.profile.to_s == "teacher")
@@ -692,6 +699,8 @@ module Api
             @school.name = ""
           end
         end
+
+        
         
         
         #@logoHeaderSecondary = wicked_pdf_asset_base64("#{ENV['FRONTEND_URL']}/images/theme/logo-header-secondary-#{@lang}.png")
