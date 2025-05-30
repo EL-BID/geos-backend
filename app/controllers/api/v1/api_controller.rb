@@ -679,6 +679,9 @@ module Api
         @devolutiveT['stateAndProvince'] ="#{@school.state_name} / #{@school.province_name}"
         dummy = "Dummy Affiliation For Unaffiliated Users"
 
+        Rails.logger.info("Antes de entrar en dummy condition")
+        Rails.logger.info("@user.affiliation_name: #{@user.affiliation_name}")
+
         if(@user.affiliation_name == dummy)
           Rails.logger.info("Entre en dummy condition")
           Rails.logger.info("@user: #{@user.name}")
